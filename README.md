@@ -12,6 +12,8 @@ Cosa devo poter fare?
 -salvare tutti i clienti con i dati ricevuti dalla registrazione
 -poter trovare un determinato cliente cercando per nome
 
+
+
 Cliente:
 -email
 -password
