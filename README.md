@@ -7,7 +7,25 @@ Cosa devo poter fare?
 -mostrare le varie tariffe
 -a seconda della tariffa scelta permettere il pagamento della stessa 
 -raccolta di informazione di un cliente una volta registrato e aver effettuato il pagamento
--spazio in cui poter assegnare una scheda di allenamento (file xls) di durata dipendente alla tariffa
--assegnare una dieta (file xls) di durata dipendente alla tariffa 
+-spazio in cui poter assegnare una scheda di allenamento (file xls) di durata dipendente dall'abbonamento
+-assegnare una dieta (file xls) di durata dipendente dall'abbonamento 
 -salvare tutti i clienti con i dati ricevuti dalla registrazione
 -poter trovare un determinato cliente cercando per nome
+
+Cliente:
+-email
+-password
+-nome
+-cognome
+-eta'
+-altezza
+-peso
+
+Abbonamento:
+-prezzo
+-validita'
+
+
+
+
+
