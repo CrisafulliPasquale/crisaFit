@@ -13,19 +13,29 @@ Cosa devo poter fare?
 -poter trovare un determinato cliente cercando per nome
 
 
+Gestore:
+-email
+-password
+-nome
 
 Cliente:
 -email
 -password
+-località
 -nome
 -cognome
--eta'
--altezza
--peso
 
 Abbonamento:
 -prezzo
 -validita'
+-identificativo
+
+Cardinalità:
+-Un cliente possiede un abbonamento (1,1)
+-Un abbonamento è posseduto da un Cliente (1,1)
+-Un gestore gestisce ogni abbonamento (1,M)
+-Ogni abbonamento è gestito da un gestore (M,1)
+
 
 
 
