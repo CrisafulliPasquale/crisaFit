@@ -37,9 +37,11 @@ Cardinalità:
 
 
 Pagina iniziale visibile all'utente:
+
 ![Screenshot 2023-10-30 122036](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/87fe733e-bb34-4e1e-a138-21079b3c506d)
 
 Pagina di (registrazione)/accesso:
+
 ![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/e63e546a-4aa9-41ca-be1a-6b5e94440f81)
 
 
