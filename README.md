@@ -34,7 +34,8 @@ Costo:
 
 SCHEMA ER:
 
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/f79bb18a-2710-48fc-8920-5c5284bcdefc)
+![ER](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/777b9035-2a49-4943-bd0c-f0f40dbd4a91)
+
 
 
 
