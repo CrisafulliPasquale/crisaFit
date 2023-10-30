@@ -57,6 +57,11 @@ Pagina visibile al gestore: in questa sezione il gestore assegna degli esercizi 
 
 ![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/b425881a-4cb8-4ac0-9575-49eec3e002d9)
 
+Pagina visibile all'utente: in questa schermata l'utente visualizza la scheda con gli esercizi assegnati dal gestore:
+
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/b4cab2d0-49cb-401f-8a65-9f581cd149d6)
+
+
 Pgina visibile al gestore: in questa sezione il gestore può ricercare un cliente per nome, cognome o località: i clienti sono memorizzati in un database rappresentato nell'immagine in questione:
 
 ![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/c8dbb0a6-7010-47d7-80e0-bf9698d589d6)
