@@ -4,12 +4,11 @@ webapp palestra, applicazioni per la gestioni degli abbonamenti di persone che v
 
 Cosa devo poter fare?
 -registrare un nuovo cliente
--mostrare le varie tariffe
--a seconda della tariffa scelta permettere il pagamento della stessa 
--raccolta di informazione di un cliente una volta registrato e aver effettuato il pagamento
--spazio in cui poter assegnare una scheda di allenamento (file xls) di durata dipendente dall'abbonamento
+-far accedere un nuovo cliente
+-mostrare le varie tariffe 
+-spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
 -salvare tutti i clienti con i dati ricevuti dalla registrazione
--poter trovare un determinato cliente cercando per nome
+-poter trovare un determinato cliente cercando per nome, cognome o località
 
 
 Gestore:
@@ -29,16 +28,22 @@ Abbonamento:
 -validita'
 -identificativo
 
+Costo:
+-id
+
 Cardinalità:
--Un cliente possiede un abbonamento (1,1)
--Un abbonamento è posseduto da un Cliente (1,1)
--Un gestore gestisce ogni abbonamento (1,M)
+-Ogni cliente possiede un abbonamento (1,1)
+-Ogni abbonamento è posseduto da un Cliente (1,1)
+-Ogni gestore gestisce ogni abbonamento (1,M)
 -Ogni abbonamento è gestito da un gestore (M,1)
+-Ogni abbonamento ha un costo(1,M)
+
 
 
 SCHEMA ER:
 
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/8b9f6754-25d7-4d1c-8f54-895f79a94077)
+![ER](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/868a4dba-4dc5-4168-b126-1be2716d7f91)
+
 
 
 
@@ -61,6 +66,11 @@ Pagina visibile al gestore: in questa sezione il gestore assegna degli esercizi 
 Pgina visibile al gestore: in questa sezione il gestore può ricercare un cliente per nome, cognome o località: i clienti sono memorizzati in un database rappresentato nell'immagine in questione:
 
 ![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/c8dbb0a6-7010-47d7-80e0-bf9698d589d6)
+
+Pagina visibile all'utente che mostra le varie tariffe offerte dal sito:
+
+![tariffe](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/15fb2a7d-f797-4a35-b9eb-f229b5e42593)
+
 
 
 
