@@ -36,6 +36,12 @@ Cardinalità:
 -Ogni abbonamento è gestito da un gestore (M,1)
 
 
+SCHEMA ER:
+
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/8b9f6754-25d7-4d1c-8f54-895f79a94077)
+
+
+
 Pagina iniziale visibile all'utente:
 
 ![Screenshot 2023-10-30 122036](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/87fe733e-bb34-4e1e-a138-21079b3c506d)
