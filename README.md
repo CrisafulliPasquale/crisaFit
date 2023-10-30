@@ -30,19 +30,12 @@ Abbonamento:
 
 Costo:
 -id
-
-Cardinalità:
--Ogni cliente possiede un abbonamento (1,1)
--Ogni abbonamento è posseduto da un Cliente (1,1)
--Ogni gestore gestisce ogni abbonamento (1,M)
--Ogni abbonamento è gestito da un gestore (M,1)
--Ogni abbonamento ha un costo(1,M)
-
-
+-entità_prezzo
 
 SCHEMA ER:
 
-![ER](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/868a4dba-4dc5-4168-b126-1be2716d7f91)
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/f79bb18a-2710-48fc-8920-5c5284bcdefc)
+
 
 
 
