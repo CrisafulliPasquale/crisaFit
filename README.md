@@ -1,6 +1,6 @@
 # crisaFit
 
-webapp palestra, applicazioni per la gestioni degli abbonamenti di persone che vogliono cambiare il proprio fisico
+webapp palestra, applicazioni per il fitness e per le persone che vogliono cambiare il proprio fisico
 
 Cosa devo poter fare?
 -registrare un nuovo cliente
