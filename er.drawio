@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-06T12:49:32.119Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="L8sA28owYAcUBq_uygmi" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-06T12:54:31.223Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="JgzTV3vEzqCU3LRg2Ut_" version="22.0.8" type="github">
   <diagram name="Pagina-1" id="dc75EaXvC--3RZLHWrB1">
     <mxGraphModel dx="558" dy="261" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -107,7 +107,7 @@
           <mxGeometry x="390" y="157.5" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6Y2S2CyCTLZjMYYPdljq-34" value="" style="line;strokeWidth=1;rotatable=0;dashed=0;labelPosition=right;align=left;verticalAlign=middle;spacingTop=0;spacingLeft=6;points=[];portConstraint=eastwest;" vertex="1" parent="1">
-          <mxGeometry x="200" y="425" width="20" height="10" as="geometry" />
+          <mxGeometry x="200" y="425" width="10" height="10" as="geometry" />
         </mxCell>
         <mxCell id="6Y2S2CyCTLZjMYYPdljq-35" value="" style="line;strokeWidth=1;rotatable=0;dashed=0;labelPosition=right;align=left;verticalAlign=middle;spacingTop=0;spacingLeft=6;points=[];portConstraint=eastwest;" vertex="1" parent="1">
           <mxGeometry x="200" y="445" width="20" height="10" as="geometry" />
@@ -116,7 +116,7 @@
           <mxGeometry x="200" y="465" width="20" height="10" as="geometry" />
         </mxCell>
         <mxCell id="6Y2S2CyCTLZjMYYPdljq-38" value="nome&lt;br&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="415" width="40" height="30" as="geometry" />
+          <mxGeometry x="210" y="415" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="6Y2S2CyCTLZjMYYPdljq-39" value="cognome" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="220" y="435" width="60" height="30" as="geometry" />
