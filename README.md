@@ -11,30 +11,11 @@ Cosa devo poter fare?
 -poter trovare un determinato cliente cercando per nome, cognome o località
 
 
-Gestore:
--email
--password
--nome
 
-Cliente:
--email
--password
--località
--nome
--cognome
-
-Abbonamento:
--prezzo
--validita'
--identificativo
-
-Costo:
--id
--entità_prezzo
 
 SCHEMA ER:
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/ec05b4ae-16f0-45d8-a757-a59f15454139)
 
-![ER](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/777b9035-2a49-4943-bd0c-f0f40dbd4a91)
 
 
 
