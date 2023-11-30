@@ -35,7 +35,6 @@
         <h2>CrisaFit | MyAccount </h2>
         <div class="welcome-message">
             <?php
-            // Verifica se la variabile del nome utente è impostata
             if (isset($_GET['username'])) {
                 $username = htmlspecialchars($_GET['username']);
                 echo "Welcome, $username!";
