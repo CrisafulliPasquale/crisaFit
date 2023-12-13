@@ -5,12 +5,15 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 # Funzionalità
 
--registrare un nuovo cliente
--far accedere un nuovo cliente
--mostrare le varie tariffe 
--spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
--salvare tutti i clienti con i dati ricevuti dalla registrazione
+-registrazione/accesso cliente
+
+-cancellare il proprio account
+
+-mostrare le varie tariffe di abbonamento 
+
 -poter trovare un determinato cliente cercando per nome, cognome o località
+
+-spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
 
 
 
