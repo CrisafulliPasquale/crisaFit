@@ -85,9 +85,9 @@ PREREQUISITI: avere un account git, avviare il docker
 aprire il codespace dal repository git  ->  
 
 sul terminale del codespace  ->
-
-docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /workspaces/crisaFit:/www tomsik68/xampp:8  ->
-
+```
+docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /workspaces/crisaFit:/www tomsik68/xampp:8 
+```
 cliccare nella sezione "PORTE" e successivamente sull'icona della sfera  ->
 
 una volta aperta la pagina di XAMPP aprire "PhpMyAdmin" per gestire il database  ->
