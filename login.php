@@ -12,18 +12,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisaFit | Login</title>
     <style>
-        body, h1, h2, p, label, input, button {
+        body, h1, h2, p, label, input, button, a {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #171616;
         }
 
         .login-container {
-            background-color: #fff;
+            background-color: #575452;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             padding: 20px;
@@ -33,7 +34,7 @@
 
         h2 {
             text-align: center;
-            color: #333;
+            color: #fff;
         }
 
         form {
@@ -43,7 +44,7 @@
 
         label {
             margin-bottom: 8px;
-            color: #555;
+            color: #ccc;
         }
 
         input {
@@ -55,7 +56,7 @@
         }
 
         button {
-            background-color: #3498db;
+            background-color: #e6720e;
             color: #fff;
             padding: 12px;
             border: none;
@@ -65,23 +66,40 @@
         }
 
         button:hover {
-            background-color: #2980b9;
+            background-color: #5c2c02;
         }
 
         a {
             display: block;
             text-align: center;
             margin-top: 20px;
-            color: #3498db;
+            color: #e6720e;
             text-decoration: none;
         }
 
         a:hover {
-            color: #2575ad;
+            color: #5c2c02;
+        }
+
+        header {
+            text-align: right;
+            padding: 10px;
+            background-color: #e6720e;
+            color: #fff;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <a href="registerOwner.php">ACCEDI COME GESTORE</a>
+    </header>
 
     <div class="login-container">
         <h2>Login</h2>
@@ -96,7 +114,7 @@
         </form>
     </div>
     <a href="registerUser.php">Non hai un account? Registrati!</a>
-
+        
 </body>
 </html>
 

@@ -8,12 +8,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisaFit | Registrazione</title>
     <style>
-        body, h1, h2, p, label, input, button, select, option {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,13 +23,13 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #171616;
+            color: #fff;
         }
 
         header {
             text-align: center;
             padding: 10px;
             background-color: #e6720e;
-            color: #fff;
         }
 
         form {
@@ -72,34 +73,51 @@
         }
 
         input[type="submit"]:hover, button:hover {
-            background-color: ##5c2c02;
+            background-color: #5c2c02;
         }
 
         select {
             margin-bottom: 16px;
         }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #e6720e;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #5c2c02;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
         <button onclick="location.href='login.php'">Login</button>
     </header>
 
-    <form action="registerUser.php" method="post">
-        <h2>Registrazione</h2>
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" required>
-        <label for="cognome">Cognome:</label>
-        <input type="text" name="cognome" id="cognome" required>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        <label for="e-mail">E-mail:</label>
-        <input type="email" name="e-mail" id="e-mail" required>
-        <label for="paese">Paese:</label>
-        <input type="text" name="paese" id="paese" required>
-        <input type="submit" value="Registrati">
-    </form>
-
+    <div>
+        <form action="registerUser.php" method="post">
+            <h2>Registrazione</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+            <label for="cognome">Cognome:</label>
+            <input type="text" name="cognome" id="cognome" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <label for="e-mail">E-mail:</label>
+            <input type="email" name="e-mail" id="e-mail" required>
+            <label for="paese">Paese:</label>
+            <input type="text" name="paese" id="paese" required>
+            <input type="submit" value="Registrati">
+        </form>
+    </div>
+    <a href="registerOwner.php">Sei un personal Trainer? Registrati qui!</a>
 </body>
+
 </html>
+
