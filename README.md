@@ -1,4 +1,4 @@
-# crisaFit
+# CrisaFit
 # Descrizione
 
 webapp palestra, applicazioni per il fitness e per le persone che vogliono cambiare il proprio fisico
@@ -78,6 +78,21 @@ Pagina visibile all'utente che mostra le varie tariffe offerte dal sito:
 ![tariffe](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/15fb2a7d-f797-4a35-b9eb-f229b5e42593)
 
 
+# Come avviare il progetto: 
+
+PREREQUISITI: avere un account git, avviare il docker
+
+aprire il codespace dal repository git  ->  
+
+sul terminale del codespace  ->
+
+docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /workspaces/crisaFit:/www tomsik68/xampp:8  ->
+
+cliccare nella sezione "PORTE" e successivamente sull'icona della sfera  ->
+
+una volta aperta la pagina di XAMPP aprire "PhpMyAdmin" per gestire il database  ->
+
+per testare il funzionamento invece, nella stringa di ricerca digitare "www" al posto di "dashboard"  ->
 
 
 
