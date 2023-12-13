@@ -1,8 +1,10 @@
 # crisaFit
+#Descrizione
 
 webapp palestra, applicazioni per il fitness e per le persone che vogliono cambiare il proprio fisico
 
-Cosa devo poter fare?
+#Funzionalità
+
 -registrare un nuovo cliente
 -far accedere un nuovo cliente
 -mostrare le varie tariffe 
@@ -13,7 +15,7 @@ Cosa devo poter fare?
 
 
 
-SCHEMA ER:
+#SCHEMA ER:
 
 
 ![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/a2870df9-c941-40a7-94ce-b650893f4a83)
@@ -25,6 +27,7 @@ SCHEMA ER:
 
 
 
+#Relazionale
 
 Pagina iniziale visibile all'utente:
 
