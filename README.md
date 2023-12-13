@@ -29,6 +29,10 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 # Relazionale
 
+
+# MOCK-UP
+
+
 Pagina iniziale visibile all'utente:
 
 ![Screenshot 2023-10-30 122036](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/87fe733e-bb34-4e1e-a138-21079b3c506d)
