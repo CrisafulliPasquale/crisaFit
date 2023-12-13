@@ -13,22 +13,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisaFit | Registrazione</title>
     <style>
-        body, h1, h2, p, label, input, button {
+        body, h1, h2, p, label, input, button, select, option {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #171616;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #e6720e;
+            color: #fff;
         }
 
         form {
-            background-color: #fff;
+            background-color: #575452;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             padding: 20px;
-            width: 300px;
+            max-width: 400px;
             margin: 50px auto;
         }
 
@@ -40,9 +48,11 @@
         label {
             margin-bottom: 8px;
             color: #555;
+            display: block;
         }
 
-        input {
+        input, select {
+            width: 100%;
             padding: 10px;
             margin-bottom: 16px;
             border: 1px solid #ccc;
@@ -50,22 +60,31 @@
             box-sizing: border-box;
         }
 
-        input[type="submit"] {
-            background-color: #3498db;
+        input[type="submit"], button {
+            background-color: #e6720e;
             color: #fff;
             padding: 12px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            width: 100%;
         }
 
-        input[type="submit"]:hover {
-            background-color: #2980b9;
+        input[type="submit"]:hover, button:hover {
+            background-color: ##5c2c02;
+        }
+
+        select {
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <button onclick="location.href='login.php'">Login</button>
+    </header>
 
     <form action="registerUser.php" method="post">
         <h2>Registrazione</h2>
