@@ -16,7 +16,8 @@ Cosa devo poter fare?
 SCHEMA ER:
 
 
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/6aabd634-9080-46bc-bd22-dda653a9dbd8)
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/a2870df9-c941-40a7-94ce-b650893f4a83)
+
 
 
 
