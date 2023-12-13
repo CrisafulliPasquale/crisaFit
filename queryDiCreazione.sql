@@ -12,6 +12,7 @@ CREATE TABLE Esercizio (
 );
 
 CREATE TABLE Cliente (
+  ID INTEGER PRIMARY KEY,
     nome VARCHAR(30),
     cognome VARCHAR(30),
     paese VARCHAR(50),
@@ -21,17 +22,17 @@ CREATE TABLE Cliente (
 );
 
 CREATE TABLE Gestore (
+  ID INTEGER PRIMARY KEY,
     nome VARCHAR(255),
     cognome VARCHAR(255),
     paese VARCHAR(255),
     e_mail VARCHAR(255),
     codice_fiscale VARCHAR(255),
     partita_iva VARCHAR(255),
-    PRIMARY KEY (codice_fiscale, partita_iva, e_mail)
 );
 
 CREATE TABLE Abbonamento (
-    ID INTEGER PRIMARY KEY,
+  ID INTEGER PRIMARY KEY,
     fine DATE,
     inizio DATE
 );
