@@ -1,27 +1,51 @@
-# crisaFit
+# CrisaFit
+# Descrizione
 
 webapp palestra, applicazioni per il fitness e per le persone che vogliono cambiare il proprio fisico
 
-Cosa devo poter fare?
--registrare un nuovo cliente
--far accedere un nuovo cliente
--mostrare le varie tariffe 
--spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
--salvare tutti i clienti con i dati ricevuti dalla registrazione
+# Funzionalità
+
+-registrazione/accesso cliente
+
+-cancellare il proprio account
+
+-mostrare le varie tariffe di abbonamento 
+
 -poter trovare un determinato cliente cercando per nome, cognome o località
 
-
-
-
-SCHEMA ER:
-
-
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/ec05b4ae-16f0-45d8-a757-a59f15454139)
+-spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
 
 
 
 
+# SCHEMA ER:
 
+
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/a2870df9-c941-40a7-94ce-b650893f4a83)
+
+
+
+
+
+
+
+
+# SCHEMA RELAZIONALE
+# Entità
+Costo(<ins>ID</ins>, metodo_pagamento, entita_prezzo)
+
+Abbonamento(<ins>ID</ins>, inizio, fine, Costo_ID, Gestore_ID, Cliente_ID) 
+
+Esercizio(<ins>ID</ins>, serie, recupero, ripetizioni)
+
+Gestore(<ins>ID</ins>, nome, cognome, password, e-mail, codice_fiscale, paese)
+
+Cliente(<ins>ID</ins>, nome, cognome, password, e-mail, paese)
+
+# relazione
+compone(<ins>Abbonamento_ID</ins>, <ins>esercizio_ID</ins>)
+
+# MOCK-UP
 
 
 Pagina iniziale visibile all'utente:
@@ -54,9 +78,65 @@ Pagina visibile all'utente che mostra le varie tariffe offerte dal sito:
 ![tariffe](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/15fb2a7d-f797-4a35-b9eb-f229b5e42593)
 
 
+# Come avviare il progetto: 
+
+PREREQUISITI: avere un account git, avviare il docker
+
+aprire il codespace dal repository git  ->  
+
+sul terminale del codespace  ->
+
+docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /workspaces/crisaFit:/www tomsik68/xampp:8  ->
+
+cliccare nella sezione "PORTE" e successivamente sull'icona della sfera  ->
+
+una volta aperta la pagina di XAMPP aprire "PhpMyAdmin" per gestire il database  ->
+
+per testare il funzionamento invece, nella stringa di ricerca digitare "www" al posto di "dashboard"  ->
 
 
+# Modello SQL 
 
+```
+CREATE TABLE IF NOT EXISTS Abbonamento (
+  ID INTEGER PRIMARY KEY,
+    fine DATE,
+    inizio DATE
+);
+
+CREATE TABLE IF NOT EXISTS Costo(
+  ID INTEGER PRIMARY KEY,
+  metodo_pagamento VARCHAR(30),
+  entita_prezzo CURRENCY
+);
+
+CREATE TABLE IF NOT EXISTS Esercizio (
+  ID INTEGER PRIMARY KEY,
+  serie INTEGER,
+  ripetizioni INTEGER,
+  recupero DATE
+);
+
+CREATE TABLE IF NOT EXISTS Cliente (
+  ID INTEGER PRIMARY KEY,
+    nome VARCHAR(30),
+    cognome VARCHAR(30),
+    paese VARCHAR(50),
+    password VARCHAR(255),
+    e_mail VARCHAR(100),
+    PRIMARY KEY (e_mail, password)
+);
+
+CREATE TABLE  IF NOT EXISTS Gestore (
+  ID INTEGER PRIMARY KEY,
+    nome VARCHAR(255),
+    cognome VARCHAR(255),
+    paese VARCHAR(255),
+    e_mail VARCHAR(255),
+    codice_fiscale VARCHAR(255),
+    partita_iva VARCHAR(255),
+);
+```
 
 
 
