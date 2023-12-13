@@ -95,7 +95,48 @@ una volta aperta la pagina di XAMPP aprire "PhpMyAdmin" per gestire il database 
 per testare il funzionamento invece, nella stringa di ricerca digitare "www" al posto di "dashboard"  ->
 
 
+# Modello SQL 
 
+```
+CREATE TABLE IF NOT EXISTS Abbonamento (
+  ID INTEGER PRIMARY KEY,
+    fine DATE,
+    inizio DATE
+);
+
+CREATE TABLE IF NOT EXISTS Costo(
+  ID INTEGER PRIMARY KEY,
+  metodo_pagamento VARCHAR(30),
+  entita_prezzo CURRENCY
+);
+
+CREATE TABLE IF NOT EXISTS Esercizio (
+  ID INTEGER PRIMARY KEY,
+  serie INTEGER,
+  ripetizioni INTEGER,
+  recupero DATE
+);
+
+CREATE TABLE IF NOT EXISTS Cliente (
+  ID INTEGER PRIMARY KEY,
+    nome VARCHAR(30),
+    cognome VARCHAR(30),
+    paese VARCHAR(50),
+    password VARCHAR(255),
+    e_mail VARCHAR(100),
+    PRIMARY KEY (e_mail, password)
+);
+
+CREATE TABLE  IF NOT EXISTS Gestore (
+  ID INTEGER PRIMARY KEY,
+    nome VARCHAR(255),
+    cognome VARCHAR(255),
+    paese VARCHAR(255),
+    e_mail VARCHAR(255),
+    codice_fiscale VARCHAR(255),
+    partita_iva VARCHAR(255),
+);
+```
 
 
 
