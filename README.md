@@ -124,17 +124,16 @@ CREATE TABLE IF NOT EXISTS Cliente (
     paese VARCHAR(50),
     password VARCHAR(255),
     e_mail VARCHAR(100),
-    PRIMARY KEY (e_mail, password)
 );
 
 CREATE TABLE  IF NOT EXISTS Gestore (
   ID INTEGER PRIMARY KEY,
     nome VARCHAR(255),
     cognome VARCHAR(255),
+    password VARCHAR(255),
     paese VARCHAR(255),
     e_mail VARCHAR(255),
-    codice_fiscale VARCHAR(255),
-    partita_iva VARCHAR(255),
+    codice_fiscale VARCHAR(255)
 );
 ```
 
