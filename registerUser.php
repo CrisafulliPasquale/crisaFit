@@ -2,7 +2,7 @@
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["password"]) && isset($_POST["e-mail"]) && isset($_POST["paese"])){
         $_SESSION['POST'] = $_POST;
-        header('Location: /crisaFit/inserimentoUtenti.php');
+        header('Location: /crisaFit/prendiUtenti.php');
     }
 ?>
 

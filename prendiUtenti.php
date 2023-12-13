@@ -12,7 +12,7 @@
         if($result->num_rows == 1){
             $un_record = $result->fetch_assoc();
             if(password_verify($post['password'], $un_record['password'])){
-                header("Location: /www/userpage.php");
+                header("Location: /www/registerUser.php");
             }else{
                 echo("Password errata");
             }
