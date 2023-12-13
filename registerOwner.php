@@ -100,7 +100,7 @@
 <body>
     <div>
         <form action="registerOwner.php" method="POST">
-            <h2>Registrazione</h2>
+            <h2>Registrazione Personal Trainer</h2>
             <label for="nome">Nome:</label>
             <input type="text" name="nome">
             <label for="cognome">Cognome:</label>

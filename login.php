@@ -102,7 +102,7 @@
     </header>
 
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>Login Cliente</h2>
         <form action="registerUser.php" method="post">
             <label for="username">Nome:</label>
             <input type="text" id="username" name="username" required>
