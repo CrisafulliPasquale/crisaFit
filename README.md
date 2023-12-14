@@ -11,6 +11,10 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -mostrare le varie tariffe di abbonamento 
 
+-mostrare la pagina di "contatti"
+
+-reindirizzare al tipo di contatto selezionato
+
 -poter trovare un determinato cliente cercando per nome, cognome o località
 
 -spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
