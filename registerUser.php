@@ -2,7 +2,7 @@
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["password"]) && isset($_POST["e-mail"]) && isset($_POST["paese"])){
         $_SESSION['POST'] = $_POST;
-        header('Location: /crisaFit/prendiUtenti.php');
+        header('Location: /www/prendiUtenti.php');
     }
 ?>
 
@@ -48,7 +48,7 @@
 
         label {
             margin-bottom: 8px;
-            color: #555;
+            color: white;
             display: block;
         }
 
@@ -120,4 +120,3 @@
 </body>
 
 </html>
-

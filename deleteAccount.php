@@ -1,31 +1,12 @@
 <?php
-// FILEPATH: /workspaces/crisaFit/deleteAccount.php
+	include "connection.php";
 
-// Connect to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "CrisaFit";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connesione fallita: " . $conn->connect_error);
-}
-
-// Delete the account
-$sql = "DELETE FROM users WHERE id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $userId);
-
-$userId = 1; // Replace with the actual user ID you want to delete
-$stmt->execute();
-
-if ($stmt->affected_rows > 0) {
-    echo "Account eliminato con successo";
-} else {
-    echo "Impossibile eliminare l'account";
-}
-
-$stmt->close();
-$conn->close();
+	$la_query = "delete from anagrafica";
+	echo("La mia query [<span style='font-weight:bold;'>".$la_query."</span>]<br/><br/>");
+	
+	if ($connessione->query($la_query))
+		echo "Record(s) cancellato(i): ".$connessione->affected_rows;
+	else
+		echo "Errore: ".$la_query."<br/>".$connessione->error;
+	$connessione->close();
 ?>
