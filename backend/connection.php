@@ -7,7 +7,7 @@ $host = "localhost";
 //
 // 	username dell'utente in connessione
 //
-$user = "root";
+$nome = "root";
 //
 // 	password dell'utente
 //
@@ -19,7 +19,7 @@ $db = "CrisaFit";
 //
 // 	Istanza dell'oggetto della classe MySQLi
 //
-$connessione = new mysqli($host, $user, $password, $db);
+$connessione = new mysqli($host, $nome, $password, $db);
 //
 // 	Verifica su eventuali errori di connessione
 //

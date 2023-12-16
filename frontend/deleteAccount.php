@@ -1,5 +1,5 @@
 <?php
-	include "connection.php";
+	include "backend/connection.php";
 
 	$la_query = "delete from anagrafica";
 	echo("La mia query [<span style='font-weight:bold;'>".$la_query."</span>]<br/><br/>");

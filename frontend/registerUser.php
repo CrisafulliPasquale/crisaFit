@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["paese"]) && isset($_POST["e-mail"]) && isset($_POST["codiceFiscale"]) && isset($_POST["password"])){
+    if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["password"]) && isset($_POST["e-mail"]) && isset($_POST["paese"])){
         $_SESSION['POST'] = $_POST;
-        header('Location: /www/prendiGestori.php');
+        header('Location: /www/backend/prendiUtenti.php');
     }
 ?>
 
@@ -48,12 +48,11 @@
 
         label {
             margin-bottom: 8px;
-            color: #555;
+            color: white;
             display: block;
         }
 
-        input,
-        select {
+        input, select {
             width: 100%;
             padding: 10px;
             margin-bottom: 16px;
@@ -62,8 +61,7 @@
             box-sizing: border-box;
         }
 
-        input[type="submit"],
-        button {
+        input[type="submit"], button {
             background-color: #e6720e;
             color: #fff;
             padding: 12px;
@@ -74,8 +72,7 @@
             width: 100%;
         }
 
-        input[type="submit"]:hover,
-        button:hover {
+        input[type="submit"]:hover, button:hover {
             background-color: #5c2c02;
         }
 
@@ -98,25 +95,28 @@
 </head>
 
 <body>
+
+    <header>
+        <button onclick="location.href='login.php'">Login</button>
+    </header>
+
     <div>
-        <form action="registerOwner.php" method="POST">
-            <h2>Registrazione Personal Trainer</h2>
+        <form action="registerUser.php" method="post">
+            <h2>Registrazione</h2>
             <label for="nome">Nome:</label>
-            <input type="text" name="nome">
+            <input type="text" name="nome" id="nome" required>
             <label for="cognome">Cognome:</label>
-            <input type="text" name="cognome">
-            <label for="paese">Paese:</label>
-            <input type="text" name="paese">
-            <label for="e-mail">E-mail:</label>
-            <input type="text" name="e-mail">
-            <label for="codiceFiscale">Codice Fiscale:</label>
-            <input type="text" name="codiceFiscale">
+            <input type="text" name="cognome" id="cognome" required>
             <label for="password">Password:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" id="password" required>
+            <label for="e-mail">E-mail:</label>
+            <input type="email" name="e-mail" id="e-mail" required>
+            <label for="paese">Paese:</label>
+            <input type="text" name="paese" id="paese" required>
             <input type="submit" value="Registrati">
         </form>
     </div>
-    <a href="login.php">Sei già nostro socio? Accedi subito da qui!</a>
+    <a href="registerOwner.php">Sei un personal Trainer? Registrati qui!</a>
 </body>
 
 </html>

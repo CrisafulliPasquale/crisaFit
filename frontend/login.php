@@ -2,7 +2,7 @@
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         $_SESSION['POST'] = $_POST;
-        header('Location: /www/prendiUtenti.php');
+        header('Location: /www/backend/prendiUtenti.php');
     }
 ?>
 <!DOCTYPE html>

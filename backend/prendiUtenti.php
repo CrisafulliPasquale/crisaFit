@@ -18,7 +18,7 @@
             }
             $result -> close();
         }else{
-            header("Location: /www/login.php");
+            header("Location: /www/frontend/login.php");
         }
     }
     $conn -> close();
