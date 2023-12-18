@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_POST["nome"]) && isset($_POST["password"])){
+        header('Location: /www/frontend/login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +15,8 @@
 <body>
     <div class="user-container">
         <h2>CrisaFit | MyAccount </h2>
-        <div class="welcome-message">
-            <?php
-            if (isset($_GET['nome'])) {
-                $username = htmlspecialchars($_GET['username']);
-                echo "Welcome, $username!";
-            } else {
-                echo "Username non valido.";
-            }
-            ?>
+        <div>
+            <span>Benvenuto</span>
         </div>
     </div>
 

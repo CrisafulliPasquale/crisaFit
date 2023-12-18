@@ -15,17 +15,17 @@ $password = "";
 //
 // nome del database
 //
-$db = "CrisaFit";
+$db = "crisaFit";
 //
 // 	Istanza dell'oggetto della classe MySQLi
 //
-$connessione = new mysqli($host, $nome, $password, $db);
+$conn = new mysqli($host, $nome, $password, $db);
 //
 // 	Verifica su eventuali errori di connessione
 //
-if ($connessione->connect_errno)
+if ($conn->connect_errno)
 {
-    echo("Connessione fallita: ".$connessione->connect_error.".");
+    echo("Connessione fallita: ".$conn->connect_error.".");
     exit();
 }
 ?>

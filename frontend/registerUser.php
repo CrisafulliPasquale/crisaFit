@@ -1,11 +1,3 @@
-<?php
-    session_start();
-    if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["password"]) && isset($_POST["e-mail"]) && isset($_POST["paese"])){
-        $_SESSION['POST'] = $_POST;
-        header('Location: /www/backend/prendiUtenti.php');
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,7 +93,7 @@
     </header>
 
     <div>
-        <form action="registerUser.php" method="post">
+        <form method="post" action="/www/backend/registerController.php">
             <h2>Registrazione</h2>
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" required>
@@ -109,8 +101,8 @@
             <input type="text" name="cognome" id="cognome" required>
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required>
-            <label for="e-mail">E-mail:</label>
-            <input type="email" name="e-mail" id="e-mail" required>
+            <label for="e_mail">E-mail:</label>
+            <input type="email" name="e_mail" id="e_mail" required>
             <label for="paese">Paese:</label>
             <input type="text" name="paese" id="paese" required>
             <input type="submit" value="Registrati">

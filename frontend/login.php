@@ -1,9 +1,10 @@
 <?php
     session_start();
+    $_SESSION['POST'] = $_POST;
     if(isset($_POST["nome"]) && isset($_POST["password"])){
-        $_SESSION['POST'] = $_POST;
         header('Location: /www/backend/prendiUtenti.php');
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,7 +104,7 @@
 
     <div class="login-container">
         <h2>Login Cliente</h2>
-        <form action="registerUser.php" method="post">
+        <form method="post" action="userpage.php">
             <label for="username">Nome:</label>
             <input type="text" id="username" name="username" required>
             

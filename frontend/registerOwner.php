@@ -48,7 +48,7 @@
 
         label {
             margin-bottom: 8px;
-            color: #555;
+            color: white;
             display: block;
         }
 
@@ -99,7 +99,7 @@
 
 <body>
     <div>
-        <form action="registerOwner.php" method="POST">
+        <form action="/www/backend/registerOwnerController.php" method="POST">
             <h2>Registrazione Personal Trainer</h2>
             <label for="nome">Nome:</label>
             <input type="text" name="nome">
@@ -107,10 +107,10 @@
             <input type="text" name="cognome">
             <label for="paese">Paese:</label>
             <input type="text" name="paese">
-            <label for="e-mail">E-mail:</label>
-            <input type="text" name="e-mail">
-            <label for="codiceFiscale">Codice Fiscale:</label>
-            <input type="text" name="codiceFiscale">
+            <label for="e_mail">E-mail:</label>
+            <input type="text" name="e_mail">
+            <label for="codice_fiscale">Codice Fiscale:</label>
+            <input type="text" name="codice_fiscale">
             <label for="password">Password:</label>
             <input type="password" name="password">
             <input type="submit" value="Registrati">
