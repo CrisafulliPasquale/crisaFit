@@ -17,6 +17,8 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -poter trovare un determinato cliente cercando per nome, cognome o località nelle pagine visibili al gestore/personal trainer
 
+-poter creare un tipo di abbonamento 
+
 -spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
 
 
