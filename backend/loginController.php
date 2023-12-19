@@ -27,7 +27,7 @@
             header("Location: /www/frontend/userpage.php"); 
         }else{
             header("Location: /www/frontend/login.php");
-            echo "nome o password errati";
+            $errore = "Nome o password errata! riprova.";
         }
     }
     $conn->close();

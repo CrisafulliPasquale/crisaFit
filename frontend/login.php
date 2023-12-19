@@ -13,12 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisaFit | Login</title>
     <style>
-        body, h1, h2, p, label, input, button, a {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Arial', sans-serif;
             background-color: #171616;
@@ -89,16 +83,18 @@
             color: #fff;
         }
 
-        header a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 20px;
+        nav {
+            text-align: left;
+            padding: 25 px 0;
+            margin: 0px;
         }
+</style>
     </style>
 </head>
 <body>
 
     <header>
+        <nav>CrisaFit</nav>
     </header>
 
     <div class="login-container">
@@ -114,6 +110,7 @@
         </form>
     </div>
     <a href="registerUser.php">Non hai un account? Registrati!</a>
+        
         
 </body>
 </html>

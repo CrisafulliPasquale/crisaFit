@@ -23,7 +23,7 @@
 
         $sql = "INSERT INTO Cliente ( nome, cognome, password, e_mail, paese) VALUES ('$nome', '$cognome', '$passwordSegreta' , '$e_mail', '$paese')";
         $result = $conn->query($sql);
-        header("Location: /www/frontend/userpage.php");
+        header("Location: /www/frontend/login.php");
         $conn->close();
     }
 ?>
