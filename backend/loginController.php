@@ -20,8 +20,8 @@
         
         if($result->num_rows > 0){
             session_start();
-            $_SESSION["nome"] = $nome;
-            header("Location: /www/frontend/userpage.php");
+            $_SESSION["nome"] = $nome; 
+            header("Location: /www/frontend/userpage.php"); 
         }else{
             header("Location: /www/frontend/login.php");
             echo "nome o password errati";
