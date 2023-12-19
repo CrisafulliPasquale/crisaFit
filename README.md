@@ -96,7 +96,7 @@ cliccare nella sezione "PORTE" e successivamente sull'icona della sfera  ->
 
 una volta aperta la pagina di XAMPP aprire "PhpMyAdmin" per gestire il database  ->
 
-per testare il funzionamento invece, nella stringa di ricerca digitare "www" al posto di "dashboard"  ->
+per testare il funzionamento invece, nella stringa di ricerca digitare "www/frontend/registerUser.php" al posto di "dashboard"  ->
 
 
 # Modello SQL 
