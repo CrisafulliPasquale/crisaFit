@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS Esercizio (
 
 CREATE TABLE IF NOT EXISTS Cliente (
   ID INTEGER PRIMARY KEY,
-    nome VARCHAR(30),
+    nome VARCHAR(30) UNIQUE,
     cognome VARCHAR(30),
     paese VARCHAR(50),
     password VARCHAR(255),
