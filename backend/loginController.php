@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -14,12 +15,14 @@
         $nome = $_POST["nome"];
         $password = $_POST["password"];
         $passwordCriptata = md5($password);
-
-        $sql = "SELECT * FROM Cliente WHERE nome='$nome' AND password='$passwordCriptata'";
-        $result = $conn->query($sql);
-        
+    
+        $sql = "SELECT * FROM Cliente WHERE nome=? AND password=?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $nome, $passwordCriptata);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
         if($result->num_rows > 0){
-            session_start();
             $_SESSION["nome"] = $nome; 
             header("Location: /www/frontend/userpage.php"); 
         }else{
@@ -28,4 +31,4 @@
         }
     }
     $conn->close();
-?>
+    ?>
