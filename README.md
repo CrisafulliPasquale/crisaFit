@@ -7,6 +7,8 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -registrazione/accesso cliente
 
+-registrazione/accesso Personal Trainer (gestore)
+
 -mostrare le varie tariffe di abbonamento 
 
 -mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato
