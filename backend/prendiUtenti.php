@@ -1,5 +1,5 @@
 <?php
-    include "/www/backend/connection.php";
+    include ".../backend/connection.php";
     session_start();
 
     $post = $_SESSION['POST'];
@@ -12,13 +12,13 @@
         if($result->num_rows == 1){
             $un_record = $result->fetch_assoc();
             if(password_verify($post['password'], $un_record['password'])){
-                header("Location: /www/frontend/registerUser.php");
+                header("Location: ../frontend/registerUser.php");
             }else{
                 echo("Password errata");
             }
             $result -> close();
         }else{
-            header("Location: /www/frontend/login.php");
+            header("Location: ../frontend/login.php");
         }
     }
     $conn -> close();

@@ -24,7 +24,7 @@
 
         $sql = "INSERT INTO Gestore ( nome, cognome, password, e_mail, codice_fiscale, paese) VALUES ('$nome', '$cognome', '$passwordCriptata' , '$e_mail', '$codice_fiscale', '$paese')";
         $result = $conn->query($sql);
-        header("Location: /www/frontend/login.php");
+        header("Location: ../frontend/login.php");
         $conn->close();
     }
 ?>

@@ -93,7 +93,7 @@
     </header>
 
     <div>
-        <form method="post" action="/www/backend/registerController.php">
+        <form method="post" action="../backend/registerController.php">
             <h2>Registrazione</h2>
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" required>

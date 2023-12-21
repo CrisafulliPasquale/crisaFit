@@ -32,12 +32,12 @@
     
         if($resultCliente->num_rows > 0){
             $_SESSION["nome"] = $nome; 
-            header("Location: /www/frontend/userpage.php"); 
+            header("Location: ../frontend/userpage.php"); 
         }else if($resultGestore->num_rows > 0){
             $_SESSION["nome"] = $nome;
-            header("Location: /www/frontend/ownerpage.php");
+            header("Location: ../frontend/ownerpage.php");
         }else{
-            header("Location: /www/frontend/login.php");
+            header("Location: ../frontend/login.php");
             $errore = "Nome utente o password errati";
         }
     }

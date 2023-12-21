@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["password"])){
-        header('Location: /www/frontend/login.php');
+        header('Location: ../frontend/login.php');
     }
 ?>
 
@@ -62,9 +62,9 @@
     <nav>
         <span>CrisaFit | Tariffe</span>
         
-        <a href="/www/frontend/userpage.php">MyAccount</a>
-        <a href="/www/frontend/contatti.php">Contatti</a>
-        <a href="/www/frontend/login.php">Esci</a>
+        <a href="../frontend/userpage.php">MyAccount</a>
+        <a href="../frontend/contatti.php">Contatti</a>
+        <a href="../frontend/login.php">Esci</a>
     </nav>
 
     <div class="container">
