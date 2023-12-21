@@ -2,7 +2,7 @@
     session_start();
     $_SESSION['POST'] = $_POST;
     if(isset($_POST["nome"]) && isset($_POST["password"])){
-        header('Location: /www/backend/prendiUtenti.php');
+        header('Location: ../backend/prendiUtenti.php');
     }
 
 ?>
@@ -99,7 +99,7 @@
 
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/www/backend/loginController.php" method="post">
+        <form action="../backend/loginController.php" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
             

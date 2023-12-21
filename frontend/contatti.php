@@ -71,9 +71,9 @@
     <nav>
         <span>CrisaFit | Contatti</span>
         
-        <a href="/www/frontend/userpage.php">MyAccount</a>
-        <a href="/www/frontend/tariffe.php">Tariffe</a>
-        <a href="/www/frontend/login.php">Esci</a>
+        <a href="userpage.php">MyAccount</a>
+        <a href="tariffe.php">Tariffe</a>
+        <a href="login.php">Esci</a>
     </nav>
 
     <div class="container">

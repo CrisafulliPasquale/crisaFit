@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["password"])){
-        header('Location: /www/frontend/login.php');
+        header('Location: login.php');
     }
 ?>
 
@@ -36,6 +36,26 @@
 
         }
 
+        nav {
+            background-color: black;
+            color: #fff;
+            text-align: right;
+            padding: 25px 0;
+            display: flex;
+            padding: 25px;
+        }
+
+        nav a {
+            color: #e6720e;
+            text-decoration: none;
+            margin: 0 0 0 15px;
+            text-align: right;
+        }
+        nav span{
+            margin-right: auto;
+            
+        }
+
         div {
             margin-top: 20px;
         }
@@ -46,8 +66,13 @@
     </style>
 </head>
 <body>
+    <nav>
+        <span>CrisaFit | PT View<span>
+        <a href="login.php">Logout</a>
+    </nav>
+
     <div class="container">
-            <span><h2>Da qui potrai gestire i tuoi clienti, <?php echo $_SESSION["nome"]; ?></h2></span>
+            <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
     </div>
 </body>
 </html>
