@@ -19,7 +19,7 @@
             background-color: #e6720e;
         }
 
-        .user-container {
+        .container {
             background-color: black;
             padding: 20px;
             margin: 20px;
@@ -27,17 +27,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container {
-            background-color: black;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-        }
+        
 
         h2 {
-            color: #333;
+            display: block;
+            margin-top: 20px;
+            color: #e6720e;
+
         }
 
         nav {
@@ -45,12 +41,17 @@
             color: #fff;
             text-align: right;
             padding: 25px 0;
+            display: flex;
+            padding: 25px;
         }
 
         nav a {
             color: #e6720e;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 0 0 15px;
+        }
+        nav span{
+            margin-right: auto;
         }
 
         div {
@@ -64,23 +65,15 @@
 </head>
 <body>
     <nav>
+        <span>CrisaFit | MyAccount<span>
+            
         <a href="/www/frontend/contatti.php">Contatti</a>
         <a href="/www/frontend/tariffe.php">Tariffe</a>
         <a href="/www/frontend/login.php">Esci</a>
     </nav>
 
-    <div class="user-container">
-        <h2>CrisaFit | MyAccount</h2>
-        <div>
-            <span>Benvenuto, <?php echo $_SESSION["nome"]; ?></span>
-        </div>
-    </div>
-    
-    <div class="image-container">
-        <div>
-            <img src="" alt="">
-        </div>
-
+    <div class="container">
+            <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
     </div>
 </body>
 </html>

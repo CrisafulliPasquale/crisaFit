@@ -28,9 +28,7 @@
         }
 
         h2 {
-            display: block;
-            margin-top: 20px;
-            color: #e6720e;
+            color: #333;
         }
 
         nav {
@@ -58,32 +56,19 @@
         span {
             color: white;
         }
-
-        a {
-            display: block;
-            margin-top: 20px;
-            color: #e6720e;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
     <nav>
-        <span>CrisaFit | Contatti</span>
+        <span>CrisaFit | Tariffe</span>
         
         <a href="/www/frontend/userpage.php">MyAccount</a>
-        <a href="/www/frontend/tariffe.php">Tariffe</a>
+        <a href="/www/frontend/contatti.php">Contatti</a>
         <a href="/www/frontend/login.php">Esci</a>
     </nav>
 
     <div class="container">
-        <h2>Numero di telefono: 371 319 5864</h2>
-    </div>
-
-    <div class="container">
-        <h2>
-            <a href="https://mail.google.com/">e-mail: crisafullim48@gmail.com</a>
-        </h2>
+        <h2>Abbonamento Silver</h2>
     </div>
 </body>
 </html>

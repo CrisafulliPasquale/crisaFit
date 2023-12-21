@@ -16,18 +16,29 @@
         $password = $_POST["password"];
         $passwordCriptata = md5($password);
     
-        $sql = "SELECT * FROM Cliente WHERE nome=? AND password=?";
-        $stmt = $conn->prepare($sql);
+        $sqlCliente = "SELECT * FROM Cliente WHERE nome=? AND password=?";
+        $stmt = $conn->prepare($sqlCliente);
         $stmt->bind_param("ss", $nome, $passwordCriptata);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $resultCliente = $stmt->get_result();
+
+
+        $sqlGestore = "SELECT * FROM Gestore WHERE nome=? AND password=?";
+        $stmt = $conn->prepare($sqlGestore);
+        $stmt->bind_param("ss", $nome, $passwordCriptata);
+        $stmt->execute();
+        $resultGestore = $stmt->get_result();
+
     
-        if($result->num_rows > 0){
+        if($resultCliente->num_rows > 0){
             $_SESSION["nome"] = $nome; 
             header("Location: /www/frontend/userpage.php"); 
+        }else if($resultGestore->num_rows > 0){
+            $_SESSION["nome"] = $nome;
+            header("Location: /www/frontend/ownerpage.php");
         }else{
             header("Location: /www/frontend/login.php");
-            $errore = "Nome o password errata! riprova.";
+            $errore = "Nome utente o password errati";
         }
     }
     $conn->close();
