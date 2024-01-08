@@ -13,7 +13,7 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato
 
-# Funzionalità FRONT END
+# Funzionalità - FRONT END
 
 -cancellare il proprio account
 
