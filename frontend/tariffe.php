@@ -69,7 +69,7 @@
 
         #argento {
             background-color: #c0c0c0;
-            color: white;
+            color: black;
         }
 
         button {
