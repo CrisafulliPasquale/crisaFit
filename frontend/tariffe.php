@@ -102,7 +102,7 @@
         <h2>Abbonamento Silver</h2>
         <h3>Prezzo: 50€/mese</h3>
         <h4>Cosa include?</br> Scheda di allenamento</h4>
-        <a href='../frontend/pagamentoAbbonamento.php'><button>ACQUISTA ORA</button></a>
+        <a href='../frontend/pagamento.php'><button>ACQUISTA ORA</button></a>
     </div>
 
 
@@ -110,14 +110,14 @@
         <h2>Abbonamento Gold</h2>
         <h3>Prezzo: 100€/mese</h3>
         <h4>Cosa include?</br> Scheda di allenamento con video-spiegazioni</h4>
-        <a href='../frontend/pagamentoAbbonamento.php'><button>ACQUISTA ORA</button></a>
+        <a href='../frontend/pagamento.php'><button>ACQUISTA ORA</button></a>
     </div>
 
     <div class="container" id="platino">
         <h2>Abbonamento Platinum</h2>
         <h3>Prezzo: 200€/mese</h3>
         <h4>Cosa include?</br> Scheda di allenamento con video-spiegazione e assistenza 24h</h4>
-        <a href='../frontend/pagamentoAbbonamento.php'><button>ACQUISTA ORA</button></a>
+        <a href='../frontend/pagamento.php'><button>ACQUISTA ORA</button></a>
     </div>
 </body>
 </html>
