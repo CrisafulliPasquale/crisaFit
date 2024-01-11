@@ -145,6 +145,13 @@ CREATE TABLE  IF NOT EXISTS Gestore (
     e_mail VARCHAR(255),
     codice_fiscale VARCHAR(255)
 );
+
+CREATE TABLE Pagamenti (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    numero_carta VARCHAR(16) NOT NULL,
+    scadenza_carta DATE NOT NULL,
+    cvv_carta VARCHAR(3) NOT NULL
+);
 ```
 
 
