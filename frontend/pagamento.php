@@ -5,7 +5,6 @@
     }
 ?>
 
-
 <style>
     body {
     font-family: 'Arial', sans-serif;
@@ -15,22 +14,22 @@
     }
 
     nav {
-            background-color: black;
-            color: #fff;
-            text-align: right;
-            padding: 25px 0;
-            display: flex;
-            padding: 25px;
-        }
+        background-color: black;
+        color: #fff;
+        text-align: right;
+        padding: 25px 0;
+        display: flex;
+        padding: 25px;
+    }
 
-        nav a {
-            color: #e6720e;
-            text-decoration: none;
-            margin: 0 0 0 15px;
-        }
-        nav span{
-            margin-right: auto;
-        }
+    nav a {
+        color: #e6720e;
+        text-decoration: none;
+        margin: 0 0 0 15px;
+    }
+    nav span{
+        margin-right: auto;
+    }
 
     .container {
         padding: 20px;
