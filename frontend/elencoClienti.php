@@ -3,16 +3,20 @@
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: login.php');
     }
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrisaFit | Personal Trainer</title>
-    <style>
-        body {
+    <title>CrisaFit | PT visualizza Clienti</title>
+</head>
+<style>
+    body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -54,45 +58,42 @@
             margin-right: auto;
         }
 
-        div {
-            margin-top: 20px;
-        }
-
-        span {
+        #elenco{
+            display: flex;
+            justify-content: space-between;
             color: white;
         }
-
-        button {
-            background-color: #black;
-            color: black;
-            font-size: 18px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: black;
-            color: white;
-        }
-    </style>
-</head>
+</style>
 <body>
     <nav>
         <span>CrisaFit | PT View</span>
         
-        <a href="../frontend/elencoClienti.php">Visualizza Clienti</a>
+        <a href="../frontend/ownerpage.php">Home Page</a>
         <a href="../frontend/login.php">Logout</a>
     </nav>
+</body> 
 
-    <div class="container">
-            <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
-    </div>      
-        
-    
-  
-</body>
-</html>
+<?php
+    include "../backend/connection.php";
+    $query = "SELECT e_mail,cognome,nome FROM Cliente";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_array($result);
+    $count = mysqli_num_rows($result);
+    if($count == 0){
+        echo "<div class='container'>Non ci sono clienti registrati</div>";
+    }else{
+        echo "<div class='container' id='elenco'>
+            <h2>Elenco Clienti</h2></br>
+        </div>";
+        echo "<div class='container' id='elenco'>";
+        while($row = mysqli_fetch_array($result)){
+            "<br>";
+            echo"
+                <h4>".$row["cognome"]."</h4>
+                <h4>".$row["nome"]."</h4>
+                <h4>".$row["e_mail"]."</h4>
+                "; 
+        }
+        echo "</div>";
+    }
+?>
