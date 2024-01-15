@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS Abbonamento (
 CREATE TABLE IF NOT EXISTS Costo(
   ID INTEGER PRIMARY KEY,
   metodo_pagamento VARCHAR(30),
-  entita_prezzo CURRENCY
+  entita_prezzo INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS Esercizio (
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS Cliente (
     cognome VARCHAR(30),
     paese VARCHAR(50),
     password VARCHAR(255),
-    e_mail VARCHAR(100),
+    e_mail VARCHAR(100)
 );
 
 CREATE TABLE  IF NOT EXISTS Gestore (
