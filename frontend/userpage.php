@@ -75,9 +75,9 @@
     <div class="container">
             <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
     </div>
-    <div class="container">
-            <span><h2>I miei abbonamenti:</h2></span>
-            
+    
+    <div class="container" id="mioAbbonamento">
+    
     </div>
 </body>
 </html>

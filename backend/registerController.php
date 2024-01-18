@@ -21,7 +21,7 @@
 
         $passwordSegreta = md5($password);
 
-        $sql = "INSERT INTO Cliente ( nome, cognome, password, e_mail, paese) VALUES ('$nome', '$cognome', '$passwordSegreta' , '$e_mail', '$paese')";
+        $sql = "INSERT INTO Cliente (nome, cognome, password, e_mail, paese) VALUES ('$nome', '$cognome', '$passwordSegreta' , '$e_mail', '$paese')";
         $result = $conn->query($sql);
         header("Location: ../frontend/login.php");
         $conn->close();
