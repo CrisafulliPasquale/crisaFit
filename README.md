@@ -108,42 +108,48 @@ per testare il funzionamento invece, nella stringa di ricerca digitare "www/fron
 # Modello SQL 
 
 ```
-CREATE TABLE IF NOT EXISTS Abbonamento (
-  ID INTEGER PRIMARY KEY,
-    fine DATE,
-    inizio DATE
-);
-
 CREATE TABLE IF NOT EXISTS Costo(
   ID INTEGER PRIMARY KEY,
   metodo_pagamento VARCHAR(30),
   entita_prezzo INTEGER
 );
 
-CREATE TABLE IF NOT EXISTS Esercizio (
+CREATE TABLE IF NOT EXISTS Gestore (
   ID INTEGER PRIMARY KEY,
-  serie INTEGER,
-  ripetizioni INTEGER,
-  recupero DATE
+  nome VARCHAR(255),
+  cognome VARCHAR(255),
+  password VARCHAR(255),
+  e_mail VARCHAR(255),
+  codice_fiscale VARCHAR(255),
+  paese VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Cliente (
   ID INTEGER PRIMARY KEY,
-    nome VARCHAR(30) UNIQUE,
-    cognome VARCHAR(30),
-    paese VARCHAR(50),
-    password VARCHAR(255),
-    e_mail VARCHAR(100)
+  nome VARCHAR(30) UNIQUE,
+  cognome VARCHAR(30),
+  password VARCHAR(255),
+  e_mail VARCHAR(100),
+  paese VARCHAR(50)
 );
 
-CREATE TABLE  IF NOT EXISTS Gestore (
+CREATE TABLE IF NOT EXISTS Abbonamento (
   ID INTEGER PRIMARY KEY,
-    nome VARCHAR(255),
-    cognome VARCHAR(255),
-    password VARCHAR(255),
-    paese VARCHAR(255),
-    e_mail VARCHAR(255),
-    codice_fiscale VARCHAR(255)
+  inizio DATE,
+  fine DATE,
+  Costo_ID INTEGER,
+  Gestore_ID INTEGER,
+  Cliente_ID INTEGER,
+  FOREIGN KEY (Costo_ID) REFERENCES Costo(ID),
+  FOREIGN KEY (Gestore_ID) REFERENCES Gestore(ID),
+  FOREIGN KEY (Cliente_ID) REFERENCES Cliente(ID)
+);
+
+CREATE TABLE IF NOT EXISTS Esercizio (
+  ID INTEGER PRIMARY KEY,
+  serie INTEGER,
+  recupero TIME,
+  ripetizioni INTEGER
 );
 
 CREATE TABLE Pagamenti (
