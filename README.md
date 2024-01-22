@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS Esercizio (
   ripetizioni INTEGER
 );
 
-CREATE TABLE Pagamenti (
+CREATE TABLE IF NOT EXISTS Pagamenti (
     id INT AUTO_INCREMENT PRIMARY KEY,
     numero_carta VARCHAR(16) NOT NULL,
     scadenza_carta DATE NOT NULL,
