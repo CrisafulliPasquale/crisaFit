@@ -138,13 +138,20 @@ CREATE TABLE IF NOT EXISTS Cliente (
 
 CREATE TABLE IF NOT EXISTS Gestore (
  ID INTEGER PRIMARY KEY,
- nome VARCHAR(255),
- cognome VARCHAR(255),
+ nome VARCHAR(30),
+ cognome VARCHAR(30),
  password VARCHAR(255),
  paese VARCHAR(255),
  e_mail VARCHAR(255),
  codice_fiscale VARCHAR(255)
 );
+
+
+CREATE IF NOT EXISTS possiede (
+Abbonamento_ID INTEGER PRIMARY KEY;
+Cliente_nome VARCHAR(30);
+
+)
 
 ```
 
