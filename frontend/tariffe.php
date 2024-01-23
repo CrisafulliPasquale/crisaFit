@@ -90,16 +90,6 @@
     </style>
 </head>
 <body>
-    <script>
-        document.getElementById("sub_gratis").addEventListener("click", function() {
-            fetch('../backend/api.php')
-            .then(response => response.json())
-            .then(data => {
-                
-                document.getElementById("subscriptionDetails").innerHTML = "Abbonamento: " + data.nome;
-            });
-        });
-    </script>
     <nav>
         <span>CrisaFit | Tariffe</span>
         
@@ -112,7 +102,6 @@
         <h2>Abbonamento Silver</h2>
         <h3>Prezzo: 50€/mese</h3>
         <h4>Cosa include?</br> Scheda di allenamento</h4>
-        <a href='../frontend/pagamento.php'><button>ACQUISTA ORA</button></a>
         <button id="sub_gratis">OTTIENI IN PROVA</button>
     </div>
 
@@ -121,16 +110,15 @@
         <h2>Abbonamento Gold</h2>
         <h3>Prezzo: 100€/mese</h3>
         <h4>Cosa include?</br> Scheda di allenamento con video-spiegazioni</h4>
-        <a href='../frontend/pagamento.php'><button>ACQUISTA ORA</button></a>
-        <button id="sub_gratis">OTTIENI IN PROVA</button>
+        <button id="sub_gratis_2">OTTIENI IN PROVA</button>
     </div>
 
     <div class="container" id="platino">
         <h2>Abbonamento Platinum</h2>
         <h3>Prezzo: 200€/mese</h3>
         <h4>Cosa include?</br> Scheda di allenamento con video-spiegazione e assistenza 24h</h4>
-        <a href='../frontend/pagamento.php'><button>ACQUISTA ORA</button></a>
-        <button id="sub_gratis">OTTIENI IN PROVA</button>
+        <button id="sub_gratis_3">OTTIENI IN PROVA</button>
     </div>
+        
 </body>
 </html>
