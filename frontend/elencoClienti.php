@@ -77,23 +77,26 @@
     include "../backend/connection.php";
     $query = "SELECT e_mail,cognome,nome FROM Cliente";
     $result = mysqli_query($conn, $query);
-    $row = mysqli_fetch_array($result);
     $count = mysqli_num_rows($result);
     if($count == 0){
         echo "<div class='container'>Non ci sono clienti registrati</div>";
     }else{
         echo "<div class='container' id='elenco'>
-            <h2>Elenco Clienti</h2></br>
-        </div>";
-        echo "<div class='container' id='elenco'>";
+            <table>
+                <tr>
+                    <th>Cognome</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Azione</th>
+                </tr>";
         while($row = mysqli_fetch_array($result)){
-            "<br>";
-            echo"
-                <h4>".$row["cognome"]."</h4>
-                <h4>".$row["nome"]."</h4>
-                <h4>".$row["e_mail"]."</h4>
-                "; 
+            echo "<tr>
+                <td>".$row["cognome"]."</td>
+                <td>".$row["nome"]."</td>
+                <td>".$row["e_mail"]."</td>
+                <td><button type='button' class='elimina-btn'>Elimina</button></td>
+            </tr>"; 
         }
-        echo "</div>";
+        echo "</table></div>";
     }
 ?>
