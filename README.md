@@ -108,50 +108,51 @@ per testare il funzionamento invece, nella stringa di ricerca digitare "www/fron
 # Modello SQL 
 
 ```
-CREATE TABLE IF NOT EXISTS Abbonamento (
-  ID INTEGER PRIMARY KEY,
-    fine DATE,
-    inizio DATE
-);
+ CREATE TABLE IF NOT EXISTS Abbonamento (
+ ID INTEGER PRIMARY KEY,
+ fine DATE,
+ inizio DATE
+ );
 
-CREATE TABLE IF NOT EXISTS Costo(
-  ID INTEGER PRIMARY KEY,
-  metodo_pagamento VARCHAR(30),
-  entita_prezzo INTEGER
+CREATE TABLE IF NOT EXISTS Costo (
+ ID INTEGER PRIMARY KEY,
+ metodo_pagamento VARCHAR(30),
+ entita_prezzo INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS Esercizio (
-  ID INTEGER PRIMARY KEY,
-  serie INTEGER,
-  ripetizioni INTEGER,
-  recupero DATE
+ ID INTEGER PRIMARY KEY,
+ serie INTEGER,
+ ripetizioni INTEGER,
+ recupero DATE
 );
 
 CREATE TABLE IF NOT EXISTS Cliente (
-  ID INTEGER PRIMARY KEY,
-    nome VARCHAR(30) UNIQUE,
-    cognome VARCHAR(30),
-    paese VARCHAR(50),
-    password VARCHAR(255),
-    e_mail VARCHAR(100)
+ ID INTEGER PRIMARY KEY,
+ nome VARCHAR(30) UNIQUE,
+ cognome VARCHAR(30),
+ paese VARCHAR(50),
+ password VARCHAR(255),
+ e_mail VARCHAR(100)
 );
 
-CREATE TABLE  IF NOT EXISTS Gestore (
-  ID INTEGER PRIMARY KEY,
-    nome VARCHAR(255),
-    cognome VARCHAR(255),
-    password VARCHAR(255),
-    paese VARCHAR(255),
-    e_mail VARCHAR(255),
-    codice_fiscale VARCHAR(255)
+CREATE TABLE IF NOT EXISTS Gestore (
+ ID INTEGER PRIMARY KEY,
+ nome VARCHAR(30),
+ cognome VARCHAR(30),
+ password VARCHAR(255),
+ paese VARCHAR(255),
+ e_mail VARCHAR(255),
+ codice_fiscale VARCHAR(255)
 );
 
-CREATE TABLE Pagamenti (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    numero_carta VARCHAR(16) NOT NULL,
-    scadenza_carta DATE NOT NULL,
-    cvv_carta VARCHAR(3) NOT NULL
-);
+
+CREATE IF NOT EXISTS possiede (
+Abbonamento_ID INTEGER PRIMARY KEY;
+Cliente_nome VARCHAR(30);
+
+)
+
 ```
 
 
