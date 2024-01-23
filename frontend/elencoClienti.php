@@ -81,21 +81,6 @@
         #elenco tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-
-        /* Stile per il pulsante "Elimina" */
-        .elimina-btn {
-            background-color: #f44336; /* Rosso */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-        }
-
-        .elimina-btn:hover {
-            opacity: 1;
-        }
 </style>
 <body>
     <nav>
