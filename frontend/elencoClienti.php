@@ -1,13 +1,5 @@
 <?php
     session_start();
-
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        
-        //echo json_encode(['success' => false, 'message' => 'Not logged in']);
-        header('Location: login.php');
-        exit;
-    }
-
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: login.php');
     }

@@ -1,12 +1,7 @@
 <?php
-    session_start();
 
-    // Controlla se l'utente ha effettuato il login
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header('Location: login.php');
-        //echo json_encode(['success' => false, 'message' => 'Not logged in']);
-        exit;
-    }
+
+    session_start();
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: ../frontend/login.php');
     }
