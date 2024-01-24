@@ -1,5 +1,12 @@
 <?php
     session_start();
+    
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        // Se l'utente non ha effettuato il login, reindirizzalo alla pagina di login
+        echo json_encode(['success' => false, 'message' => 'Not logged in']);
+        exit;
+    }
+    
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: login.php');
     }

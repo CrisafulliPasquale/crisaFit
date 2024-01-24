@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        // Se l'utente non ha effettuato il login, reindirizzalo alla pagina di login
+        echo json_encode(['success' => false, 'message' => 'Not logged in']);
+        exit;
+    }
+    
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: login.php');
     }
@@ -90,44 +97,38 @@
         <a href="../frontend/login.php">Logout</a>
     </nav>
 
-    <div>
-        <h2><input type="button" id="elimina-btn">CANCELLA CLIENTE</h2>
-    </div>
     <script>
     // Select all delete buttons
+        var deleteButtons = document.querySelectorAll("#elenco tr td button");
 
-        document.addEventListener("DOMContentLoaded", function(event){
-            var pulsanteElimina = document.getElementById('elimina-btn');
-            pulsanteElimina.addEventListener("click", sulClick);
-
+        // Add event listener to each button
+        deleteButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var id_cliente = this.parentElement.parentElement.id;
+                eliminaCliente(id_cliente);
+            });
         });
-        
-        function sulClick(e){
-            e.preventDefault();
-            var clienteId = e.target.getAttribute('data-id');
-            console.log(e);
 
+        function eliminaCliente(id_cliente){
+            var clienteId = id_cliente;
             let xhr = new XMLHttpRequest();
-            xhr.open('POST', 'eliminaCliente.php', true);
-            xhr.send();
+            xhr.open("POST", "../backend/eliminaCliente.php", true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.send('id=' + clienteId);
 
             xhr.onload = function() {
-                if (xhr.status === 200) {
-                    
-                    console.log('Error ${xhr.status}: ${xhr.statusText}');
+                if (this.status == 200 && this.readyState == 4) {
+                    var response = JSON.parse(this.responseText);
+                    if (response.success) {
+                        document.getElementById(clienteId).remove();
+                        console.log("Cliente eliminato con successo");
+                    } else {
+                        console.log("Errore: " + response.message);
+                    }
                 } else {
-                    console.log('Done, got ${xhr.response.length} bytes');
-
-                    var response = JSON.parse(xhr.responseText);
-                    response = JSON.parse(xhr.responseText);
-                    console.log(response);
-
-                    var t = document.getElementById('elenco');
-                    t.innerHTML = response;
+                    console.log("Errore di rete");
                 }
             };
-            
-            return false;
         }
     </script>
 
@@ -135,27 +136,28 @@
 
 
 <?php
-    include "../backend/connection.php";
-    $query = "SELECT e_mail,cognome,nome FROM Cliente";
-    $result = mysqli_query($conn, $query);
-    $count = mysqli_num_rows($result);
-    if($count == 0){
-        echo "<div class='container'>Non ci sono clienti registrati</div>";
-    }else{
-        echo "<div class='container' id='elenco'>
-            <table>
-                <tr>
-                    <th>Cognome</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                </tr>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>
-                <td>".$row["cognome"]."</td>
-                <td>".$row["nome"]."</td>
-                <td>".$row["e_mail"]."</td>
-            </tr>"; 
-        }
-        echo "</table></div>";
+    include '../backend/connection.php';
+    
+    $sql = "SELECT ID, e_mail, cognome, nome FROM Cliente";
+    $query = $conn->prepare($sql);
+    $query->execute();
+    $result = $query->get_result();
+
+    echo "<div class='container' id='elenco'>
+        <table>
+            <tr>
+                <th>Cognome</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>";
+    while($cliente = $result->fetch_assoc()){
+        echo "<tr id='".$cliente["ID"]."'>
+            <td>".$cliente["cognome"]."</td>
+            <td>".$cliente["nome"]."</td>
+            <td>".$cliente["e_mail"]."</td>
+            <td><button onclick='eliminaCliente(".$cliente["ID"].")'>Elimina</button></td>
+        </tr>"; 
     }
+    echo "</table></div>";
 ?>
