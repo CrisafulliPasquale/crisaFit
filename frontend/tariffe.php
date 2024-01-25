@@ -1,10 +1,19 @@
 <?php
 
-
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: ../frontend/login.php');
     }
+
+
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "crisaFit";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
 ?>
 
 <!DOCTYPE html>
@@ -100,27 +109,40 @@
         <a href="../frontend/login.php">Esci</a>
     </nav>
 
-    <div class="container" id="argento">
-        <h2>Abbonamento Silver</h2>
-        <h3>Prezzo: 50€/mese</h3>
-        <h4>Cosa include?</br> Scheda di allenamento</h4>
-        <button id="sub_gratis">OTTIENI IN PROVA</button>
-    </div>
+    <?php
+    // Connessione al database
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "crisaFit";
 
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    <div class="container" id="oro">
-        <h2>Abbonamento Gold</h2>
-        <h3>Prezzo: 100€/mese</h3>
-        <h4>Cosa include?</br> Scheda di allenamento con video-spiegazioni</h4>
-        <button id="sub_gratis_2">OTTIENI IN PROVA</button>
-    </div>
+    if ($conn->connect_error) {
+        die('Errore di connessione (' . $conn->connect_errno . ') ' . $conn->connect_error);
+    }
 
-    <div class="container" id="platino">
-        <h2>Abbonamento Platinum</h2>
-        <h3>Prezzo: 200€/mese</h3>
-        <h4>Cosa include?</br> Scheda di allenamento con video-spiegazione e assistenza 24h</h4>
-        <button id="sub_gratis_3">OTTIENI IN PROVA</button>
-    </div>
+    // Query SQL
+    $sql = "SELECT * FROM Tariffa";
+
+    // Esecuzione della query e ottenimento dei risultati
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Output di ciascuna tariffa
+        while($row = $result->fetch_assoc()) {
+            echo '<div class="div-container">';
+            echo '<h2>' . $row['nome'] . '</h2>';
+            echo '<p>' . $row['descrizione'] . '</p>';
+            echo '<p>Prezzo: ' . $row['prezzo'] . '</p>';
+            echo '</div>';
+        }
+    } else {
+        echo 'Non ci sono tariffe disponibili';
+    }
+
+    $conn->close();
+    ?>
         
 </body>
 </html>

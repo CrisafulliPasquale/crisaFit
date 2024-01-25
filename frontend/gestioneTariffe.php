@@ -1,5 +1,4 @@
 <?php
-    
     session_start();
     if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: login.php');
@@ -11,9 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrisaFit | Personal Trainer</title>
-    <style>
-        body {
+    <title>CrisaFit | PT visualizza Clienti</title>
+</head>
+<style>
+    body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -54,47 +54,28 @@
         nav span{
             margin-right: auto;
         }
-
-        div {
-            margin-top: 20px;
-        }
-
-        span {
-            color: white;
-        }
-
-        button {
-            background-color: #black;
-            color: black;
-            font-size: 18px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: black;
-            color: white;
-        }
-    </style>
-</head>
+</style>
 <body>
     <nav>
         <span>CrisaFit | PT View</span>
         
-        <a href="../frontend/elencoClienti.php">Visualizza Clienti</a>
-        <a href="../frontend/gestioneTariffe.php">Gestisci tariffe</a>
-        <a href="../frontend/login.php">Logout</a>
+        <a href="../frontend/ownerpage.php">Home Page</a>
+        <a href="../frontend/elencoClienti.php">Visualizza Cliente</a>
     </nav>
 
-    <div class="container">
-            <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
-    </div>      
-        
-    
-  
+    <div class="div-container">
+        <form action="../backend/creaTariffa.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="descrizione">Descrizione:</label>
+            <textarea id="descrizione" name="descrizione" required></textarea>
+
+            <label for="prezzo">Prezzo:</label>
+            <input type="number" id="prezzo" name="prezzo" required>
+
+            <input type="submit" value="Crea Tariffa">
+        </form>
+    </div>
+
 </body>
-</html>

@@ -107,10 +107,11 @@
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "../backend/eliminaCliente.php", true);
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.send('id=' + clienteId);
+            xhr.send("ID=" + clienteId);
 
             xhr.onload = function() {
                 if (this.status == 200 && this.readyState == 4) {
+                    console.log(this.responseText);
                     var response = JSON.parse(this.responseText);
                     if (response.success) {
                         document.getElementById(clienteId).remove();
@@ -142,14 +143,14 @@
                 <th>Cognome</th>
                 <th>Nome</th>
                 <th>Email</th>
-                <th>Actions</th>
+                <th>Azioni</th>
             </tr>";
     while($cliente = $result->fetch_assoc()){
         echo "<tr id='".$cliente["ID"]."'>
             <td>".$cliente["cognome"]."</td>
             <td>".$cliente["nome"]."</td>
             <td>".$cliente["e_mail"]."</td>
-            <td><button onclick='eliminaCliente(".$cliente["ID"].")'>Elimina</button></td>
+            <td><button onclick='eliminaCliente(".$cliente["ID"].")'>Elimina Cliente</button></td>
         </tr>"; 
     }
     echo "</table></div>";

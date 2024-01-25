@@ -22,6 +22,13 @@
 
         $passwordCriptata = md5($password);
 
+        $codice_fiscale = $_POST['codice_fiscale'];
+
+        // Verifica la validità del codice fiscale
+        if (!preg_match('/^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$/i', $codice_fiscale)) {
+            die('Codice fiscale non valido');
+        }
+
         $sql = "INSERT INTO Gestore ( nome, cognome, password, e_mail, codice_fiscale, paese) VALUES ('$nome', '$cognome', '$passwordCriptata' , '$e_mail', '$codice_fiscale', '$paese')";
         $result = $conn->query($sql);
         header("Location: ../frontend/login.php");

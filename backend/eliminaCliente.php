@@ -1,5 +1,6 @@
 <?php
     // Avvia la sessione
+    include 'connection.php';
     session_start();
 
     if(isset($_POST["ID"])){
