@@ -75,6 +75,8 @@
             <input type="number" id="prezzo" name="prezzo" required>
 
             <input type="submit" value="Crea Tariffa">
+            <input type="submit" value="Elimina Tariffa">   
+
         </form>
     </div>
 

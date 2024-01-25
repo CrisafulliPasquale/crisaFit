@@ -135,6 +135,7 @@
             echo '<h2>' . $row['nome'] . '</h2>';
             echo '<p>' . $row['descrizione'] . '</p>';
             echo '<p>Prezzo: ' . $row['prezzo'] . '</p>';
+
             echo '</div>';
         }
     } else {
