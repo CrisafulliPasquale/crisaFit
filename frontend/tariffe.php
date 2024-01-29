@@ -39,7 +39,9 @@
         }
 
         h2 {
-            color: #333;
+            display: block;
+            margin-top: 20px;
+            color: #e6720e;
         }
 
         nav {
@@ -56,48 +58,46 @@
             text-decoration: none;
             margin: 0 0 0 15px;
         }
-        nav span{
+
+        nav span {
             margin-right: auto;
         }
 
-        div {
-            margin-top: 20px;
+        .div-container {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        span {
-            color: white;
+        .div-container form {
+            display: flex;
+            flex-direction: column;
         }
 
-        #platino {
-            background-color: #E5e4e2;
-            color: black;
+        .div-container form label {
+            margin-bottom: 10px;
         }
 
-        #oro {
-            background-color: #d6a315;
-            color: white;
+        .div-container form input[type="text"],
+        .div-container form input[type="number"],
+        .div-container form textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
         }
 
-        #argento {
-            background-color: #c0c0c0;
-            color: black;
-        }
-
-        button {
+        .div-container form input[type="submit"] {
             background-color: #e6720e;
             color: white;
-            font-size: 18px;
-            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
+            border-radius: 4px;
             cursor: pointer;
-            text-align: center;
-            transition: background-color 0.3s ease;
         }
-
-        button:hover {
-            background-color: #ff9a44;
-        }
+        
     </style>
 </head>
 <body>
