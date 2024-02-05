@@ -18,7 +18,7 @@
     <nav>
         <span>CrisaFit | PT View</span>
         
-        <a href="../frontend/ownerpage.php">Home Page</a>
+        <a href="../frontend/ownerpage.php" class="home-page">Home Page</a>
         <a href="../frontend/elencoClienti.php">Visualizza Cliente</a>
     </nav>
 
@@ -62,5 +62,6 @@
     }
 
     echo '</select>';
+    echo '<br><br>';
     echo '<input type="submit" class="delete-button" value="Elimina tariffa">';
     echo '</form>';

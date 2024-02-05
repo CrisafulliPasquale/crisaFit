@@ -10,64 +10,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisaFit | Contatti</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e6720e;
-        }
-
-        .container {
-            background-color: black;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            display: block;
-            margin-top: 20px;
-            color: #e6720e;
-        }
-
-        nav {
-            background-color: black;
-            color: #fff;
-            text-align: right;
-            padding: 25px 0;
-            display: flex;
-            padding: 25px;
-        }
-
-        nav a {
-            color: #e6720e;
-            text-decoration: none;
-            margin: 0 0 0 15px;
-        }
-        nav span{
-            margin-right: auto;
-        }
-
-        div {
-            margin-top: 20px;
-        }
-
-        span {
-            color: white;
-        }
-
-        a {
-            display: block;
-            margin-top: 20px;
-            color: #e6720e;
-            text-decoration: none;
-        }
-    </style>
+    
 </head>
 <body>
     <nav>

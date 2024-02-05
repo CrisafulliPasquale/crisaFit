@@ -19,86 +19,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisaFit | Contatti</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e6720e;
-        }
-
-        .container {
-            background-color: black;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            display: block;
-            margin-top: 20px;
-            color: #e6720e;
-        }
-
-        nav {
-            background-color: black;
-            color: #fff;
-            text-align: right;
-            padding: 25px 0;
-            display: flex;
-            padding: 25px;
-        }
-
-        nav a {
-            color: #e6720e;
-            text-decoration: none;
-            margin: 0 0 0 15px;
-        }
-
-        nav span {
-            margin-right: auto;
-        }
-
-        .div-container {
-            background-color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .div-container form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .div-container form label {
-            margin-bottom: 10px;
-        }
-
-        .div-container form input[type="text"],
-        .div-container form input[type="number"],
-        .div-container form textarea {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        .div-container form input[type="submit"] {
-            background-color: #e6720e;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-    </style>
 </head>
 <body>
     <nav>

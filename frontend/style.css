@@ -2,89 +2,113 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #ffffff;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #000;
+    padding: 20px;
+    margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 140, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #ffa500;
-    margin-bottom: 20px;
+    display: block;
+    margin-top: 10px;
+    color: #e6720e;
 }
 
 nav {
     background-color: #000;
-    color: #ffa500;
-    padding: 20px;
+    color: #fff;
+    text-align: right;
+    padding: 25px 0;
     display: flex;
-    justify-content: space-between;
+    align-items: center; 
+    justify-content: flex-end; 
 }
 
 nav a {
-    color: #ffa500;
+    color: #e6720e;
     text-decoration: none;
-    margin-left: 15px;
+    margin: 0 10px;
+    justify-content: flex-end;
+}
+
+nav span {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div {
+    margin-top: 20px;
+}
+
+span {
+    color: #fff;
+    justify-content: right !important;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: #e6720e;
+    text-decoration: none;
 }
 
 .div-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #333;
+    background-color: #000;
+    color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 140, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.div-container form {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #444;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px; /* Puoi modificare questo valore in base alle tue esigenze */
-}
-
-.div-container form label {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #ffa500;
-}
-
-.div-container form input[type="text"],
-.div-container form input[type="number"],
-.div-container form textarea,
-.div-container form select {
+.div-container select{
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #ffa500;
-    margin-bottom: 20px;
-    background-color: #fff;
-    color: #000;
-}
-
-.div-container form input[type="submit"] {
-    background-color: #ffa500;
-    color: #000;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    background-color: white;
+    color: #000;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.div-container form input[type="submit"]:hover {
-    background-color: #e67e00;
+.div-container input[type="submit"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e6720e;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.div-container input[type="submit"]:hover {
+    background-color: #b35807;
+}
+
+#elenco table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+/* Stile per le intestazioni della tabella */
+#elenco th {
+    text-align: left;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+/* Stile per le celle della tabella */
+#elenco td {
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Stile per le righe della tabella */
+#elenco tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
