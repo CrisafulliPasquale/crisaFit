@@ -5,25 +5,28 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 # Funzionalità - BACK END
 
--registrazione/accesso cliente
+-registrazione/accesso cliente ✔️
 
--registrazione/accesso Personal Trainer (gestore)
+-registrazione/accesso Personal Trainer (gestore) ✔️
 
--mostrare le varie tariffe di abbonamento 
+-mostrare le varie tariffe di abbonamento ✔️
 
--mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato
+-mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato ✔️
 
 # Funzionalità - FRONT END
 
--cancellare il proprio account
-
--dare la possibilità all'utente di scegliere un abbonamento
+-mostrare i contatti al cliente ✔️
 
 -poter trovare un determinato cliente cercando per nome, cognome o località nelle pagine visibili al gestore/personal trainer
 
--poter creare un tipo di abbonamento 
+-poter eliminare un determinato cliente ✔️
 
--spazio in cui poter assegnare una scheda di allenamento (interfaccia web drag & drop) di durata dipendente dall'abbonamento
+-poter aggiungere un determinato cliente
+
+-poter creare una tariffa ✔️
+
+-poter cancellare una tariffa ✔️
+
 
 
 
