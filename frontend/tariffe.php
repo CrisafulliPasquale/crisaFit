@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrisaFit | Contatti</title>
+    <title>CrisaFit | Tariffe</title>
 </head>
 <body>
     <nav>
@@ -59,13 +59,14 @@
             echo '<h2>' . $row['nome'] . '</h2>';
             echo '<p>' . $row['descrizione'] . '</p>';
             echo '<p>Prezzo: ' . $row['prezzo'] . '</p>';
+            echo '<button id="ottenere"> Ottieni </button>';
 
             echo '</div>';
         }
     } else {
         echo 'Non ci sono tariffe disponibili';
     }
-
+    
     $conn->close();
     ?>
         

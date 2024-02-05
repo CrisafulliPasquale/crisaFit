@@ -29,9 +29,10 @@
 
     <div class="container">
             <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
-    </div>      
-        
-    
-  
+    </div> 
+
+    <div class="container" id="tariffa">
+        <span><h2>Il mio abbonamento </h2></span>
+    </div>
 </body>
 </html>
