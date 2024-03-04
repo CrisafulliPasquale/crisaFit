@@ -39,6 +39,15 @@
         <h2>Indirizzo: Piazzale Pesi, 25080, Bergamo</h2>
     </div>
 
+    <div class="container">
+        <h2>
+            <a href="https://www.instagram.com/">Seguimi su Instagram</a>
+        </h2>
+    </div>
+
+    
+    
+
     
 </body>
 </html>

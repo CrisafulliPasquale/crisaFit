@@ -25,6 +25,8 @@
         <a href="../frontend/login.php">Logout</a>
     </nav>
 
+    
+        
     <script>
     // Select all delete buttons
         var deleteButtons = document.querySelectorAll("#elenco tr td button");
