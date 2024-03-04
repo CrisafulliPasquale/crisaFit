@@ -18,7 +18,8 @@
 
     <header class="head-login">
         <nav class="nav-login">CrisaFit</nav>
-    </header>
+    </header><br><br>
+    
 
     <div class="login-container">
         <h2>Login</h2>
