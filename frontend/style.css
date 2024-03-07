@@ -202,6 +202,17 @@ a {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.search {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.search input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
 
 .div-container input[type="submit"]:hover {
     background-color: #b35807;
@@ -230,3 +241,4 @@ a {
 #elenco tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+

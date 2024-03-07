@@ -1,8 +1,30 @@
 <?php
+
     session_start();
-    if(isset($_POST["nome"]) && isset($_POST["password"])){
-        header('Location: login.php');
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "crisaFit";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verifica della connessione
+    if ($conn->connect_error) {
+        die("Connection failed: " . $db->connect_error);
     }
+    
+    // Inizializzazione della variabile di ricerca
+    $search = '';
+    
+    // Verifica se è stata inviata una richiesta di ricerca
+    if (isset($_POST['search'])) {
+        $search = $_POST['search'];
+    }
+    
+    // Query SQL per cercare i clienti
+    $sql = "SELECT * FROM Cliente WHERE nome LIKE '%$search%' OR cognome LIKE '%$search%'";
+    
+    $result = $conn->query($sql);
 
 ?>
 
@@ -22,8 +44,10 @@
         <span>CrisaFit | PT View</span>
         
         <a href="../frontend/ownerpage.php">Home Page</a>
+        <a href="../frontend/registraClienti.php">Registra Cliente</a>
         <a href="../frontend/login.php">Logout</a>
     </nav>
+
 
     
         
@@ -67,7 +91,9 @@
 
 
 <?php
+
     include '../backend/connection.php';
+    
     
     $sql = "SELECT ID, e_mail, cognome, nome FROM Cliente";
     $query = $conn->prepare($sql);
@@ -75,6 +101,10 @@
     $result = $query->get_result();
 
     echo "<div class='container' id='elenco'>
+        <form action='elencoClienti.php' method='post'>
+            <input type='text' name='search' placeholder='Cerca cliente'>
+            <button type='submit'>Cerca</button>
+        </form>
         <table>
             <tr>
                 <th>Cognome</th>
