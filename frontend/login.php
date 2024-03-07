@@ -16,16 +16,15 @@
 </head>
 <body>
 
-    <header class="head-login">
-        <nav class="nav-login">CrisaFit</nav>
-    </header><br><br>
+    <nav>
+        <a>CrisaFit | Login Page </a>   
+    </nav>
     
-
     <div class="login-container">
         <h2>Login</h2>
         <form action="../backend/loginController.php" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <label for="e_mail">e-mail:</label>
+            <input type="text" id="e_mail" name="e_mail" required>
             
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>

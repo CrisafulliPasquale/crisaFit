@@ -11,9 +11,11 @@
 
 <body>
 
-    <header>
-        <button onclick="location.href='login.php'">Login</button>
-    </header>
+    <nav>
+        <span>CrisaFit | </span>
+        <a href='login.php'>Login</a>
+        
+    </nav>
 
     <div>
         <form class="registra" method="post" action="../backend/registerController.php">
