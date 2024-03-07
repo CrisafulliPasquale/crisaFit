@@ -28,7 +28,7 @@
     </nav>
 
     <div class="container">
-            <span><h2>Benvenuto, <?php echo $_SESSION["nome"]; ?></h2></span>
+            <span><h2>Benvenuto</h2></span>
     </div> 
 
     <div class="container" id="tariffa">

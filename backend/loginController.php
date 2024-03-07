@@ -42,4 +42,5 @@
         }
     }
     $conn->close();
+    session_abort();
     ?>
