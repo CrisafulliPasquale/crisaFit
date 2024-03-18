@@ -32,13 +32,13 @@
     
         if($resultCliente->num_rows > 0){
             $_SESSION["e_mail"] = $mail; 
-            header("Location: ../frontend/userpage.php"); 
+            header("Location: ../frontend/sceltaPersonal.php"); 
         }else if($resultGestore->num_rows > 0){
             $_SESSION["e_mail"] = $mail;
             header("Location: ../frontend/ownerpage.php");
         }else{
             header("Location: ../frontend/login.php");
-            $errore = "Mail o password errati";
+            echo "<div class='error'>Credenziali errate</div>";
         }
     }
     $conn->close();

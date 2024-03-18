@@ -48,7 +48,7 @@ $db->close();
         <a href="../frontend/login.php">Logout</a>
     </nav>
 
-    <form action="registraClienti.php" method="post">
+    <form action="..registraClienti.php" method="post">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome"><br>
         <label for="cognome">Cognome:</label><br>

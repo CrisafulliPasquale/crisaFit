@@ -2,12 +2,13 @@
     session_start();
     
     if(isset($_POST["nome"]) && isset($_POST["password"])){
-        header('Location: login.php');
-    }
-
-    if(isset($_POST["nome"]) && isset($_POST["password"])){
         header('Location: ../frontend/login.php');
+
+
+        
     }
+    $_SESSION['selected_trainer_id'] = $_GET['ID'];
+    
 ?>
 
 <!DOCTYPE html>

@@ -34,6 +34,8 @@
     </nav>
 
     <?php
+
+
     // Connessione al database
     $servername = "localhost";
     $username = "root";
@@ -46,9 +48,13 @@
         die('Errore di connessione (' . $conn->connect_errno . ') ' . $conn->connect_error);
     }
 
+    if (isset($_SESSION['selected_trainer_id'])) {
+        $trainer_id = $_SESSION['selected_trainer_id'];
+    }
     // Query SQL
-    $sql = "SELECT * FROM Tariffa";
+    $sql = "SELECT * FROM Tariffa WHERE gestore_id = $trainer_id";
 
+    
     // Esecuzione della query e ottenimento dei risultati
     $result = $conn->query($sql);
 
@@ -62,6 +68,7 @@
             echo '<button id="ottenere"> Ottieni </button>';
 
             echo '</div>';
+            
         }
     } else {
         echo 'Non ci sono tariffe disponibili';
