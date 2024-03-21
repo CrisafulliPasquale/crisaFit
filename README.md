@@ -34,7 +34,8 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 # SCHEMA ER:
 
 
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/a2870df9-c941-40a7-94ce-b650893f4a83)
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/fd0943b9-236e-464d-bac0-93f99ed9bb67)
+
 
 
 
