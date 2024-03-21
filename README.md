@@ -45,7 +45,6 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 # SCHEMA RELAZIONALE
 # Entità
-Costo(<ins>ID</ins>, metodo_pagamento, entita_prezzo)
 
 Abbonamento(<ins>ID</ins>, inizio, fine, Costo_ID, Gestore_ID, Cliente_ID) 
 
@@ -54,6 +53,8 @@ Esercizio(<ins>ID</ins>, serie, recupero, ripetizioni)
 Gestore(<ins>ID</ins>, nome, cognome, password, e-mail, codice_fiscale, paese)
 
 Cliente(<ins>ID</ins>, nome, cognome, password, e-mail, paese)
+
+Tariffa(<ins>ID</ins>, nome, descrizione, prezzo)
 
 # relazione
 compone(<ins>Abbonamento_ID</ins>, <ins>esercizio_ID</ins>)
