@@ -4,6 +4,7 @@
     $password = "";
     $dbname = "crisaFit";
 
+    session_start();
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
@@ -16,11 +17,11 @@
     $prezzo = $_POST['prezzo'];
 
     // Query SQL
-    $sql = "INSERT INTO Tariffa (nome, descrizione, prezzo) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO Tariffa (nome, descrizione, prezzo, gestore_id) VALUES (?, ?, ?, ?)";
 
     // Preparazione ed esecuzione della query
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssd", $nome, $descrizione, $prezzo);
+    $stmt->bind_param("sssd", $nome, $descrizione, $prezzo, $_SESSION['id']);
     $stmt->execute();
 
     if ($stmt->error) {

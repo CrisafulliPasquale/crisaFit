@@ -8,7 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #2bb10985;
 }
 
 .testoR, .testoR2 {
@@ -16,7 +16,7 @@ body {
 }
 
 .registra, .registrazione { /*form registra user e form registra personal*/
-    background-color: #e6720e;
+    background-color: #2ab109;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -29,7 +29,7 @@ body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    color: #e6720e;
+    color: #2ab109;
     text-decoration: none;
 }
 
@@ -50,7 +50,7 @@ select {
 
 input[type="submit"],
 button {
-    background-color: #e6720e;
+    background-color: #2ab109;
     color: #000;
     padding: 12px;
     border: none;
@@ -68,14 +68,14 @@ button:hover {
 
 .head-login {
     background-color: #000;
-    color: #e6720e;
+    color: #2ab109;
     padding: 10px 0;
     text-align: center;
 }
 
 .nav-login{
     background-color: #000;
-    color: #e6720e;
+    color: #2ab109;
     text-align: right;
     padding: 25px 0;
     display: flex;
@@ -114,7 +114,7 @@ button:hover {
 .login-container button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #e6720e;
+    background-color: #2ab109;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -134,7 +134,7 @@ button:hover {
 h2 {
     display: block;
     margin-top: 10px;
-    color: #e6720e;
+    color: #2ab109;
 }
 
 nav {
@@ -148,7 +148,7 @@ nav {
 }
 
 nav a {
-    color: #e6720e;
+    color: #2ab109;
     text-decoration: none;
     margin: 0 10px;
     justify-content: flex-end;
@@ -171,7 +171,7 @@ span {
 a {
     display: block;
     margin-top: 10px;
-    color: #e6720e;
+    color: #2ab109;
     text-decoration: none;
 }
 
@@ -197,7 +197,7 @@ a {
     padding: 10px;
     border-radius: 4px;
     border: none;
-    background-color: #e6720e;
+    background-color: #2ab109;
     color: #000;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -215,7 +215,7 @@ a {
 
 
 .div-container input[type="submit"]:hover {
-    background-color: #b35807;
+    background-color: #2ab109;
 }
 
 #elenco table {

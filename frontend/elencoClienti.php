@@ -45,7 +45,7 @@
         
         <a href="../frontend/ownerpage.php">Home Page</a>
         <a href="../frontend/registraClienti.php">Registra Cliente</a>
-        <a href="../frontend/login.php">Logout</a>
+        <a href="../backend/logout.php">Logout</a>
     </nav>
 
 
@@ -95,7 +95,7 @@
     include '../backend/connection.php';
     
     
-    $sql = "SELECT ID, e_mail, cognome, nome FROM Cliente";
+    $sql = "SELECT ID, e_mail, cognome, nome FROM Cliente WHERE gestore_id = ".$_SESSION['id']." ORDER BY cognome ASC";
     $query = $conn->prepare($sql);
     $query->execute();
     $result = $query->get_result();

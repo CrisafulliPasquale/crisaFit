@@ -20,7 +20,7 @@
         
         <a href="../frontend/elencoClienti.php">Visualizza Clienti</a>
         <a href="../frontend/gestioneTariffe.php">Gestisci tariffe</a>
-        <a href="../frontend/login.php">Logout</a>
+        <a href="../backend/logout.php">Logout</a>
     </nav>
 
     <div class="container">

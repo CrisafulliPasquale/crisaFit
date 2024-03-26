@@ -31,10 +31,12 @@
 
     
         if($resultCliente->num_rows > 0){
-            $_SESSION["e_mail"] = $mail; 
+            $_SESSION["e_mail"] = $mail;
+            $_SESSION["id"] = $resultCliente->fetch_assoc()["ID"];
             header("Location: ../frontend/sceltaPersonal.php"); 
         }else if($resultGestore->num_rows > 0){
             $_SESSION["e_mail"] = $mail;
+            $_SESSION["id"] = $resultGestore->fetch_assoc()["ID"];
             header("Location: ../frontend/ownerpage.php");
         }else{
             header("Location: ../frontend/login.php");
@@ -42,5 +44,4 @@
         }
     }
     $conn->close();
-    session_abort();
     ?>

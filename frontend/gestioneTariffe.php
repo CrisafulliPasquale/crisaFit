@@ -22,7 +22,6 @@
         <a href="../frontend/elencoClienti.php">Visualizza Cliente</a>
     </nav>
 
-    
     <div class="div-container">
         <form action="../backend/creaTariffa.php" method="post">
             <label for="nome">Nome:</label>

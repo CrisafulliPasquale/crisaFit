@@ -65,7 +65,7 @@
             echo '<h2>' . $row['nome'] . '</h2>';
             echo '<p>' . $row['descrizione'] . '</p>';
             echo '<p>Prezzo: ' . $row['prezzo'] . '</p>';
-            echo '<button id="ottenere"> Ottieni </button>';
+            echo '<button id="ottenere" onclick="location.href=\'../backend/assegnaTariffa.php?tariffa=' . $row['id'] . '\'">Ottieni</button>';
 
             echo '</div>';
             

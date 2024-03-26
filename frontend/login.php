@@ -19,7 +19,7 @@
     <nav>
         <a>CrisaFit | Login Page </a>   
     </nav>
-    
+
     <div class="login-container">
         <h2>Login</h2>
         <form action="../backend/loginController.php" method="post">
