@@ -311,6 +311,7 @@ nel caso di un personal trainer, nella stringa di ricerca digitare "www/frontend
 
 CREDENZIALI PER CLIENTE: e-mail: testcliente@gmail.com
                          password: cliente
+                         
 CREDENZIALI PER CLIENTE: e-mail: crisafullim48@gmail.com
                          password: pasquale05             
 
