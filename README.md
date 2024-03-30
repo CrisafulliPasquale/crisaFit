@@ -53,7 +53,7 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 # SCHEMA RELAZIONALE
 # Entità
 
-Gestore(<ins>ID</ins>, nome, cognome, email, password, codice_fiscale, numero);
+Gestore(<ins>ID</ins>, nome, cognome, email, password, codice_fiscale, paese);
 
 Cliente(<ins>ID</ins>, nome, cognome, password, email, paese);
 
