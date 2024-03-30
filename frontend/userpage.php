@@ -34,7 +34,6 @@
     <nav>
         <span>CrisaFit | PT View</span>
         
-        <a href="../frontend/contatti.php">Contatti</a>
         <a href="../frontend/tariffe.php">Tariffe</a>
         <a href="../backend/logout.php">Logout</a>
     </nav>
@@ -56,10 +55,10 @@
             if ($result->num_rows > 0) {
                 // Output di ciascuna tariffa
                 while($row = $result->fetch_assoc()) {
-                    echo '<div class="card">';
-                    echo '<p>' . $row['nome'] . '€</p>';    
-                    echo '<p>' . $row['descrizione'] . '</p>';
-                    echo '</div>';
+                    echo '<h3>' . $row['nome'] . '</h3>';
+                    echo '<p style="color:white;">' . $row['nome'] . '</p>';    
+                    echo '<p style="color:white;">' . $row['descrizione'] . '</p>';
+                    
 
                 }
             } else {

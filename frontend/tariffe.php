@@ -29,7 +29,6 @@
         <span>CrisaFit | Tariffe</span>
         
         <a href="../frontend/userpage.php">MyAccount</a>
-        <a href="../frontend/contatti.php">Contatti</a>
         <a href="../frontend/login.php">Esci</a>
     </nav>
 
