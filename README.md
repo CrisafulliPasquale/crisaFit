@@ -11,11 +11,13 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -mostrare le varie tariffe di abbonamento ✔️
 
--mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato ✔️
+-Personal trainer diversi possono avere più clienti diversi ✔️
+
+-I clienti hanno un personal trainer e ne visualizzano le rispettive informazioni ✔️
 
 # Funzionalità - FRONT END
 
--mostrare i contatti al cliente ✔️
+-scelta del personal trainer ✔️
 
 -poter trovare un determinato cliente cercando per nome, cognome o località nelle pagine visibili al gestore/personal trainer
 
@@ -27,6 +29,8 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -poter cancellare una tariffa ✔️
 
+-il cliente può ottenere una tariffa o più ✔️
+
 
 
 
@@ -34,7 +38,9 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 # SCHEMA ER:
 
 
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/fd0943b9-236e-464d-bac0-93f99ed9bb67)
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/4585fb10-e6fe-416c-bce7-66b25e01e4bd)
+
+
 
 
 
@@ -47,20 +53,22 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 # SCHEMA RELAZIONALE
 # Entità
 
-Abbonamento(<ins>ID</ins>, inizio, fine, Costo_ID, Gestore_ID, Cliente_ID) 
+Gestore(<ins>ID</ins>, nome, cognome, email, password, codice_fiscale, numero);
 
-Esercizio(<ins>ID</ins>, serie, recupero, ripetizioni)
-
-Gestore(<ins>ID</ins>, nome, cognome, password, e-mail, codice_fiscale, paese)
-
-Cliente(<ins>ID</ins>, nome, cognome, password, e-mail, paese)
+Cliente(<ins>ID</ins>, nome, cognome, password, email, paese);
 
 Tariffa(<ins>ID</ins>, nome, descrizione, prezzo)
 
-# relazione
-compone(<ins>Abbonamento_ID</ins>, <ins>esercizio_ID</ins>)
+# relazioni
+
+crea(<ins>id_gestore</ins>);
+
+ottiene(<ins>id_cliente</ins>,<ins>id_tariffa</ins>)
 
 # MOCK-UP
+
+![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/f4865e9b-2e8b-455a-ae6d-5ce0cbfff8f7)
+
 
 
 Pagina iniziale visibile all'utente:
@@ -107,18 +115,17 @@ cliccare nella sezione "PORTE" e successivamente sull'icona della sfera  ->
 
 una volta aperta la pagina di XAMPP aprire "PhpMyAdmin" per gestire il database  ->
 
-per testare il funzionamento invece, nella stringa di ricerca digitare "www/frontend/registerUser.php" al posto di "dashboard"  ->
-
+copiare questo codice sql ->
 
 # Modello SQL 
 
 ```
- -- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mar 25, 2024 alle 12:48
+-- Creato il: Mar 30, 2024 alle 13:12
 -- Versione del server: 10.4.28-MariaDB
 -- Versione PHP: 8.2.4
 
@@ -157,33 +164,8 @@ CREATE TABLE `Cliente` (
 --
 
 INSERT INTO `Cliente` (`ID`, `nome`, `cognome`, `paese`, `password`, `e_mail`, `gestore_id`) VALUES
-(18, 'Nicola', 'Bresciani', 'ITALIA', 'ed0de5739fe65204ede7f52105da6bb0', 'nico@gmail.com', 7),
-(19, 'Simone', 'Arzuffi', 'ITALIA', '50eadfb263785c630137ca628b183aee', 'simone.arzuffi05@gmail.com', 8);
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `Costo`
---
-
-CREATE TABLE `Costo` (
-  `ID` int(11) NOT NULL,
-  `metodo_pagamento` varchar(30) DEFAULT NULL,
-  `entita_prezzo` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `Esercizio`
---
-
-CREATE TABLE `Esercizio` (
-  `ID` int(11) NOT NULL,
-  `serie` int(11) DEFAULT NULL,
-  `ripetizioni` int(11) DEFAULT NULL,
-  `recupero` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+(19, 'Simone', 'Arzuffi', 'ITALIA', '50eadfb263785c630137ca628b183aee', 'simone.arzuffi05@gmail.com', 8),
+(21, 'cliente', 'cliente', 'ITALIA', '4983a0ab83ed86e0e7213c8783940193', 'testcliente@gmail.com', 7);
 
 -- --------------------------------------------------------
 
@@ -212,6 +194,26 @@ INSERT INTO `Gestore` (`ID`, `nome`, `cognome`, `password`, `paese`, `e_mail`, `
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `Ottiene`
+--
+
+CREATE TABLE `Ottiene` (
+  `id_cliente` int(11) NOT NULL,
+  `id_tariffa` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `Ottiene`
+--
+
+INSERT INTO `Ottiene` (`id_cliente`, `id_tariffa`) VALUES
+(18, 24),
+(18, 19),
+(21, 19);
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `Tariffa`
 --
 
@@ -228,7 +230,8 @@ CREATE TABLE `Tariffa` (
 --
 
 INSERT INTO `Tariffa` (`id`, `nome`, `descrizione`, `prezzo`, `gestore_id`) VALUES
-(19, 'COACHING SILVER', 'Durata: 10 settimane. solo scheda allenamento \r\n\r\n', 99.00, 7);
+(19, 'COACHING SILVER', 'Durata: 10 settimane. solo scheda allenamento \r\n\r\n', 99.00, 7),
+(24, 'COACHING GOLD', 'Durata: 15 settimane solo allenamento', 500.00, 7);
 
 --
 -- Indici per le tabelle scaricate
@@ -241,18 +244,6 @@ ALTER TABLE `Cliente`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `nome` (`nome`),
   ADD KEY `gestore_id` (`gestore_id`);
-
---
--- Indici per le tabelle `Costo`
---
-ALTER TABLE `Costo`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indici per le tabelle `Esercizio`
---
-ALTER TABLE `Esercizio`
-  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indici per le tabelle `Gestore`
@@ -275,7 +266,7 @@ ALTER TABLE `Tariffa`
 -- AUTO_INCREMENT per la tabella `Cliente`
 --
 ALTER TABLE `Cliente`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT per la tabella `Gestore`
@@ -287,7 +278,7 @@ ALTER TABLE `Gestore`
 -- AUTO_INCREMENT per la tabella `Tariffa`
 --
 ALTER TABLE `Tariffa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Limiti per le tabelle scaricate
@@ -312,6 +303,18 @@ COMMIT;
 
 
 ```
+
+per testare il funzionamento invece, nel caso di un cliente, nella stringa di ricerca digitare "www/frontend/registerUser.php" al posto di "dashboard"  ->
+
+nel caso di un personal trainer, nella stringa di ricerca digitare "www/frontend/registerOwner.php" al posto di "dashboard"  ->
+
+
+CREDENZIALI PER CLIENTE: e-mail: testcliente@gmail.com
+                         password: cliente
+CREDENZIALI PER CLIENTE: e-mail: crisafullim48@gmail.com
+                         password: pasquale05             
+
+
 
 
 
