@@ -11,8 +11,6 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -mostrare le varie tariffe di abbonamento ✔️
 
--mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato ✔️
-
 -Personal trainer diversi possono avere più clienti diversi ✔️
 
 -I clienti hanno un personal trainer e ne visualizzano le rispettive informazioni ✔️
@@ -20,8 +18,6 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 # Funzionalità - FRONT END
 
 -scelta del personal trainer ✔️
-
--mostrare i contatti al cliente ✔️
 
 -poter trovare un determinato cliente cercando per nome, cognome o località nelle pagine visibili al gestore/personal trainer
 
