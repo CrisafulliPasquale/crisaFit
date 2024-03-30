@@ -13,7 +13,13 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -mostrare la pagina di "contatti" e reindirizzare al tipo di contatto selezionato ✔️
 
+-Personal trainer diversi possono avere più clienti diversi ✔️
+
+-I clienti hanno un personal trainer e ne visualizzano le rispettive informazioni ✔️
+
 # Funzionalità - FRONT END
+
+-scelta del personal trainer ✔️
 
 -mostrare i contatti al cliente ✔️
 
@@ -26,6 +32,8 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 -poter creare una tariffa ✔️
 
 -poter cancellare una tariffa ✔️
+
+-il cliente può ottenere una tariffa o più ✔️
 
 
 
@@ -113,12 +121,12 @@ per testare il funzionamento invece, nella stringa di ricerca digitare "www/fron
 # Modello SQL 
 
 ```
- -- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mar 25, 2024 alle 12:48
+-- Creato il: Mar 30, 2024 alle 12:49
 -- Versione del server: 10.4.28-MariaDB
 -- Versione PHP: 8.2.4
 
@@ -212,6 +220,25 @@ INSERT INTO `Gestore` (`ID`, `nome`, `cognome`, `password`, `paese`, `e_mail`, `
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `Ottiene`
+--
+
+CREATE TABLE `Ottiene` (
+  `id_cliente` int(11) NOT NULL,
+  `id_tariffa` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `Ottiene`
+--
+
+INSERT INTO `Ottiene` (`id_cliente`, `id_tariffa`) VALUES
+(18, 24),
+(18, 19);
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `Tariffa`
 --
 
@@ -228,7 +255,8 @@ CREATE TABLE `Tariffa` (
 --
 
 INSERT INTO `Tariffa` (`id`, `nome`, `descrizione`, `prezzo`, `gestore_id`) VALUES
-(19, 'COACHING SILVER', 'Durata: 10 settimane. solo scheda allenamento \r\n\r\n', 99.00, 7);
+(19, 'COACHING SILVER', 'Durata: 10 settimane. solo scheda allenamento \r\n\r\n', 99.00, 7),
+(24, 'COACHING GOLD', 'Durata: 15 settimane solo allenamento', 500.00, 7);
 
 --
 -- Indici per le tabelle scaricate
@@ -287,7 +315,7 @@ ALTER TABLE `Gestore`
 -- AUTO_INCREMENT per la tabella `Tariffa`
 --
 ALTER TABLE `Tariffa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Limiti per le tabelle scaricate
@@ -309,6 +337,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
 
 
 ```
