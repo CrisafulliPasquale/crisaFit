@@ -53,7 +53,7 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 # SCHEMA RELAZIONALE
 # Entità
 
-Gestore(<ins>ID</ins>, nome, cognome, email, password, codice_fiscale, numero);
+Gestore(<ins>ID</ins>, nome, cognome, email, password, codice_fiscale, paese);
 
 Cliente(<ins>ID</ins>, nome, cognome, password, email, paese);
 
@@ -311,6 +311,7 @@ nel caso di un personal trainer, nella stringa di ricerca digitare "www/frontend
 
 CREDENZIALI PER CLIENTE: e-mail: testcliente@gmail.com
                          password: cliente
+                         
 CREDENZIALI PER CLIENTE: e-mail: crisafullim48@gmail.com
                          password: pasquale05             
 
