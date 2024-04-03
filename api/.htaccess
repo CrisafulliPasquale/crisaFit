@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /www/api/
+
+# Reindirizzamento per DatiUtente.php con ID
+RewriteRule ^mostraClientiAPI/(\d+)/?$ mostraClientiAPI.php?ID=$1 [L]
+# Reindirizzamento per Movimenti.php con ID
+RewriteRule ^mostraClientiAPI/mostraTariffeClientiAPI/(\d+)/?$ mostraTariffeClientiAPI.php?ID=$1 [L]
+
+# Reindirizzamento per mostraClieniAPI.php
+RewriteRule ^mostraClientiAPI/?$ mostraClientiAPI.php [L]
+RewriteRule ^mostraClientiAPI/mostraTariffeClientiAPI/?$ mostraTariffeClientiAPI.php [L]
