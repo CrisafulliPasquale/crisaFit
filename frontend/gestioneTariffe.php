@@ -50,7 +50,7 @@
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $sql = "SELECT * FROM Tariffa";
+    $sql = "SELECT * FROM Tariffa WHERE gestore_id = ".$_SESSION["id"]."";
     $result = $conn->query($sql);
 
     echo '<form class="div-container" action="../backend/eliminaTariffa.php" method="post">';
@@ -64,3 +64,4 @@
     echo '<br><br>';
     echo '<input type="submit" class="delete-button" value="Elimina tariffa">';
     echo '</form>';
+

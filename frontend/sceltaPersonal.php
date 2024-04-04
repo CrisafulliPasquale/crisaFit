@@ -31,7 +31,7 @@
 
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                echo "<div class='card' onclick=\"window.location.href='../frontend/userpage.php?ID=" . $row['ID'] . "'\">";
+                echo "<div class='card' onclick=\"window.location.href='../backend/scegliPersonalController.php?ID=" . $row['ID'] . "'\">";
                 echo "<h2>" . $row['nome'] . " " . $row['cognome'] . "</h2>";
                 echo "<p>" . $row['e_mail'] . "</p>";
                 echo "</div>";

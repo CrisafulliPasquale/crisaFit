@@ -44,7 +44,7 @@
         <span>CrisaFit | PT View</span>
         
         <a href="../frontend/ownerpage.php">Home Page</a>
-        <a href="../frontend/registraClienti.php">Registra Cliente</a>
+        <!--<a href="../frontend/registraClienti.php">Registra Cliente</a> -->
         <a href="../backend/logout.php">Logout</a>
     </nav>
 

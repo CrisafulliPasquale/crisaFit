@@ -31,9 +31,15 @@
 
     
         if($resultCliente->num_rows > 0){
+            $cliente = $resultCliente->fetch_assoc();
             $_SESSION["e_mail"] = $mail;
-            $_SESSION["id"] = $resultCliente->fetch_assoc()["ID"];
-            header("Location: ../frontend/sceltaPersonal.php"); 
+            $_SESSION["id"] = $cliente["ID"];
+            if($cliente['gestore_id'] != null){
+                $_SESSION['selected_trainer_id'] = $cliente['gestore_id'];
+                header("Location: ../frontend/userpage.php");     
+            }else{
+                header("Location: ../frontend/sceltaPersonal.php"); 
+            }
         }else if($resultGestore->num_rows > 0){
             $_SESSION["e_mail"] = $mail;
             $_SESSION["id"] = $resultGestore->fetch_assoc()["ID"];

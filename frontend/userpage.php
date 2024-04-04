@@ -15,10 +15,6 @@
 
         
     }
-    if(isset($_GET['ID'])){
-        $_SESSION['selected_trainer_id'] = $_GET['ID'];
-    }
-
     
 ?>
 
