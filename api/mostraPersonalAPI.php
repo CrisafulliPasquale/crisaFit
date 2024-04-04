@@ -7,15 +7,18 @@ $dbname = "crisaFit";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$uri = explode( '/', $uri );
+
 // Controllo della connessione
 if ($conn->connect_error) {
     die("Connessione fallita: " . $conn->connect_error);
 }
 
 // 2. Verifica se viene richiesto l'elenco completo dei gestori o solo uno specifico
-if(isset($_GET['ID'])) {
+if(isset($uri['4'])) {
     // Se è specificato un ID, esegui la query per ottenere solo il gestore specificato
-    $idGestore = $_GET['ID'];
+    $idGestore = $uri['4'];
     $sqlGestori = "SELECT * FROM Gestore WHERE ID = $idGestore";
 } else {
     // Altrimenti, esegui la query per ottenere tutti i gestori
@@ -50,7 +53,7 @@ while ($rowGestore = $resultGestori->fetch_assoc()) {
 }
 
 // 3. Restituire i dati in formato JSON
-header('Content-Type: application/json');
+//header('Content-Type: application/json');
 echo json_encode($gestori);
 
 // 4. Chiudi la connessione

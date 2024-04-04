@@ -17,10 +17,17 @@
 
     // Crea query SQL
     $sql = "DELETE FROM Tariffa WHERE id=$id";
+    $sqlEliminaTariffa = "DELETE FROM Ottiene WHERE id_tariffa = $id";
+
 
     // Esegui la query
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../frontend/gestioneTariffe.php');
+        if($conn->query($sqlEliminaTariffa) == TRUE){
+            header('Location: ../frontend/gestioneTariffe.php');
+        }
+        else{
+            echo "Errore";
+        }
         exit;
     } else {
         echo "Errore durante l'eliminazione della tariffa: " . $conn->error;

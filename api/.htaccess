@@ -1,18 +1,18 @@
 RewriteEngine On
 RewriteBase /www/api/
 
-# Reindirizzamento per mostraClieniAPI.php
+# Reindirizzamento per mostraClientiAPI.php
 RewriteRule ^mostraClientiAPI/(\d+)/?$ mostraClientiAPI.php?ID=$1 [L]
-RewriteRule ^mostraClientiAPI/mostraTariffeClientiAPI/(\d+)/?$ mostraTariffeClientiAPI.php?ID=$1 [L]
+RewriteRule ^mostraClientiAPI/?$ mostraClientiAPI.php [L]
 
 # Reindirizzamento per mostraTariffeClientiAPI.php
-RewriteRule ^mostraClientiAPI/?$ mostraClientiAPI.php [L]
-RewriteRule ^mostraClientiAPI/mostraTariffeClientiAPI/?$ mostraTariffeClientiAPI.php [L]
+RewriteRule ^mostraTariffeClientiAPI/(\d+)/?$ mostraTariffeClientiAPI.php?ID=$1 [L]
+RewriteRule ^mostraTariffeClientiAPI/?$ mostraTariffeClientiAPI.php [L]
+
+
 
 # Reindirizzamento per mostraPersonalAPI.php con ID
 RewriteRule ^mostraPersonalAPI/(\d+)/?$ mostraPersonalAPI.php?ID=$1 [L]
-
-# Reindirizzamento per mostraPersonalAPI.php
 RewriteRule ^mostraPersonalAPI/?$ mostraPersonalAPI.php [L]
 
 
