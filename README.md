@@ -67,7 +67,6 @@ ottiene(<ins>id_cliente</ins>,<ins>id_tariffa</ins>)
 
 # MOCK-UP
 
-![image](https://github.com/CrisafulliPasquale/crisaFit/assets/101709329/f4865e9b-2e8b-455a-ae6d-5ce0cbfff8f7)
 
 
 
