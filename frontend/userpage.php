@@ -51,9 +51,15 @@
             if ($result->num_rows > 0) {
                 // Output di ciascuna tariffa
                 while($row = $result->fetch_assoc()) {
+                    $data_fine = clone new DateTime($row["data_inizio"]);
+
+                    $data_fine->modify("+" . $row["durata"] . " days");
+
                     echo '<h3>' . $row['nome'] . '</h3>';
                     echo '<p style="color:white;">' . $row['nome'] . '</p>';    
                     echo '<p style="color:white;">' . $row['descrizione'] . '</p>';
+                    echo '<p style="color:white;">' . $row['data_inizio'] . '</p>';
+                    echo '<p style="color:white;">' . $data_fine->format('Y-m-d'). '</p>';
                     
 
                 }

@@ -109,6 +109,7 @@
             <tr>
                 <th>Cognome</th>
                 <th>Nome</th>
+                <th>Identificativo</th>
                 <th>Email</th>
                 <th>Azioni</th>
             </tr>";
@@ -116,6 +117,7 @@
         echo "<tr id='".$cliente["ID"]."'>
             <td>".$cliente["cognome"]."</td>
             <td>".$cliente["nome"]."</td>
+            <td>".$cliente["ID"]."</td>
             <td>".$cliente["e_mail"]."</td>
             <td><button onclick='eliminaCliente(".$cliente["ID"].")'>Elimina Cliente</button></td>
         </tr>"; 

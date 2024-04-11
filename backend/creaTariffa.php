@@ -15,13 +15,14 @@
     $nome = $_POST['nome'];
     $descrizione = $_POST['descrizione'];
     $prezzo = $_POST['prezzo'];
+    $durata = $_POST['durata'];
 
     // Query SQL
-    $sql = "INSERT INTO Tariffa (nome, descrizione, prezzo, gestore_id) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO Tariffa (nome, descrizione, prezzo, durata, gestore_id) VALUES (?, ?, ?, ?, ?)";
 
     // Preparazione ed esecuzione della query
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssd", $nome, $descrizione, $prezzo, $_SESSION['id']);
+    $stmt->bind_param("ssssd", $nome, $descrizione, $prezzo, $durata, $_SESSION['id']);
     $stmt->execute();
 
     if ($stmt->error) {

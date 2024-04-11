@@ -1,32 +1,32 @@
 <?php
-    session_start();
+session_start();
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "crisaFit";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "crisaFit";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if ($conn->connect_error) {
-        die('Errore di connessione (' . $conn->connect_errno . ') ' . $conn->connect_error);
-    }
+if ($conn->connect_error) {
+    die('Errore di connessione (' . $conn->connect_errno . ') ' . $conn->connect_error);
+}
 
-    $tariffa = $_GET['tariffa'];
+$tariffa = $_GET['tariffa'];
 
-    $sql = "INSERT INTO Ottiene (id_cliente, id_tariffa) VALUES (?, ?)";
+$sql = "INSERT INTO Ottiene (id_cliente, id_tariffa, data_inizio) VALUES (?, ?, ?)";
 
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $_SESSION['id'], $tariffa);
-    $stmt->execute();
+$stamp_inizio = time();
+$data_inizio = date('Y-m-d H:i:s', $stamp_inizio);
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("iss", $_SESSION['id'], $tariffa, $data_inizio); // Modificato per includere anche la data di inizio
+$stmt->execute();
 
-    
+if ($stmt->error) {
+    die('Errore durante l\'assegnazione della tariffa: ' . $stmt->error);
+}
 
-    if ($stmt->error) {
-        die('Errore durante l\'assegnazione della tariffa: ' . $stmt->error);
-    }
+$stmt->close();
 
-    $stmt->close();
-
-    header('Location: ../frontend/userpage.php');
+header('Location: ../frontend/userpage.php');
 ?>

@@ -16,4 +16,8 @@ RewriteRule ^mostraPersonalAPI/(\d+)/?$ mostraPersonalAPI.php?ID=$1 [L]
 RewriteRule ^mostraPersonalAPI/?$ mostraPersonalAPI.php [L]
 
 
+# Reindirizzamento per la pagina di login
+RewriteCond %{HTTP_HOST} ^(www\.)?example\.com$
+RewriteRule ^$ /frontend/login.php [L]
+
  

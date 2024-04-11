@@ -27,8 +27,11 @@
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
-            <label for="descrizione">Descrizione:</label>
-            <textarea id="descrizione" name="descrizione" required></textarea>
+            <label for="descrizione">Descrizione:</label></br>
+            <textarea id="descrizione" name="descrizione" required></textarea></br>
+
+            <label for="durata">Durata in giorni:</label>
+            <input type="number" id="durata" name="durata" required>
 
             <label for="prezzo">Prezzo:</label>
             <input type="number" id="prezzo" name="prezzo" required>
