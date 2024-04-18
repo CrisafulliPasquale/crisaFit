@@ -23,7 +23,7 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -poter eliminare un determinato cliente ✔️
 
--poter aggiungere un determinato cliente
+-poter aggiungere un determinato cliente ✔️
 
 -poter creare una tariffa ✔️
 
