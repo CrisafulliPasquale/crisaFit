@@ -19,8 +19,6 @@ webapp palestra, applicazioni per il fitness e per le persone che vogliono cambi
 
 -scelta del personal trainer ✔️
 
--poter trovare un determinato cliente cercando per nome, cognome o località nelle pagine visibili al gestore/personal trainer
-
 -poter eliminare un determinato cliente ✔️
 
 -poter aggiungere un determinato cliente ✔️
